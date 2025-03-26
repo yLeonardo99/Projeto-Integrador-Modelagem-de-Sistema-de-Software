@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Tattoo - Arte em Pele</title>
+    <link rel="stylesheet" href="src/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Link para o Favicon -->
+    <link rel="icon" href="src/images/favicon.png" type="image/x-icon">
+
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="src/images/logo.png" alt="Logo do Studio Tattoo" />
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="orçamentoCliente.html">Orçamento</a></li>
+                <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="agendaCliente.html">Agenda</a></li>
+                <li><a href="#" class="open-btn" onclick="openPopup('loginPopup')">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pop-up de Login -->
+
+    <div id="loginPopup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <label for="login-email">E-mail:</label>
+                <input type="email" id="login-email" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="login-password">Senha:</label>
+                <input type="password" id="login-password" name="password" placeholder="Digite sua senha" required>
+
+                <button type="submit">Entrar</button>
+            </form>
+            <p class="switch-popup">Não tem uma conta? <a href="#" onclick="switchPopup()">Cadastre-se</a></p>
+        </div>
+    </div>
+
+    <!-- Pop-up de Cadastro -->
+
+    <div id="cadastroPopup" class="popup-container">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('cadastroPopup')">&times;</span>
+            <h2>Cadastrar</h2>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+                <label for="cadastro-email">E-mail:</label>
+                <input type="email" id="cadastro-email" name="email" placeholder="Digite seu e-mail" required>
+
+                <label for="cadastro-password">Senha:</label>
+                <input type="password" id="cadastro-password" name="password" placeholder="Crie uma senha" required>
+
+                <label for="confirm-password">Confirmar Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha"
+                    required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Studio <br> de Tatuagem</h1>
+                <h2>Bem-vindo ao Studio Stfin</h2>
+                <p>Transforme suas ideias em arte</p>
+                <a href="orçamentoCliente.html" class="btn">Solicite um orçamento!</a>
+            </div>
+            <img src="src/images/image.png" alt="Imagem representativa do Studio Tattoo" />
+        </section>
+
+        <section id="sobre">
+            <div class="sobre-container">
+                <img src="src/images/tatuador.png" alt="Hiroshi Tanaka, tatuador do estúdio" class="sobre-imagem">
+                <div class="sobre-texto">
+                    <h2>Sobre</h2>
+                    <p>Sou Hiroshi Tanaka, tatuador especializado na arte tradicional japonesa, o Irezumi. Nasci em
+                        Kyoto e sempre fui fascinado pelos desenhos de dragões e carpas que via nos festivais. Aos 18
+                        anos, comecei como aprendiz de um mestre tatuador e aprendi a técnica do tebori, um método
+                        manual que exige precisão.
+                        Hoje, trabalho em meu estúdio em Tóquio, onde misturo tradição e modernidade para criar
+                        tatuagens que contam histórias. Para mim, cada desenho tem um significado e carrega um pouco da
+                        cultura japonesa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="espaco" class="espaco">
+            <div class="espaco-content">
+                <div class="espaco-texto">
+                    <h2>Nosso Espaço</h2>
+                    <p><strong>Endereço:</strong> Bairro da Liberdade, Rua Galvão Bueno, 312 - São Paulo, SP</p>
+                    <p>O estúdio de tatuagem tem um ambiente aconchegante e bem organizado. As paredes claras e os
+                        quadros com desenhos criam um clima artístico e acolhedor. A cadeira de tatuagem, confortável e
+                        ajustável, garante que o cliente se sinta à vontade durante o processo.
+                        As janelas trazem luz natural, mas também garantem privacidade com os adesivos estilizados.</p>
+                </div>
+                <div class="espaco-imagem">
+                    <img src="src/images/espaço.png" alt="Foto do espaço interno do Studio Tattoo">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contato-opcoes">
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <img src="images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="src/images/instagram-icon.png" alt="Instagram do estúdio" />
+            </a>
+        </div>
+        <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+    </footer>
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
