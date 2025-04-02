@@ -1,0 +1,349 @@
+/* Estilos  para a página de avaliações */
+
+
+/* No Backegroud abaixo, deixei a opção de colocar uma imagem de fundo no titulo ou deixa o Gradiente */
+
+.avaliacoes-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/avaliacoes-bg.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.avaliacoes-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(139, 24, 211, 0.2) 0%, rgba(0, 0, 0, 0.8) 70%);
+    z-index: 1;
+}
+
+.avaliacoes-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.avaliacoes-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to right, #8b18d3, #ff6b6b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.avaliacoes-hero p {
+    font-size: 1.3rem;
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+#avaliacoes {
+    padding: 80px 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.avaliacoes-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.avaliacoes-container h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #8b18d3;
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.avaliacoes-container h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(90deg, #8b18d3, transparent);
+    bottom: -15px;
+    left: 25%;
+}
+
+.avaliacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.avaliacao-card {
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-top: 3px solid #8b18d3;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: cardFadeIn 0.8s forwards;
+}
+
+.avaliacao-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.avaliacao-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.avaliacao-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.avaliacao-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.avaliacao-card:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.avaliacao-card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.avaliacao-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow: 0 15px 40px rgba(139, 24, 211, 0.4);
+}
+
+.avaliacao-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avaliacao-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8b18d3;
+    margin-right: 20px;
+    box-shadow: 0 5px 15px rgba(139, 24, 211, 0.3);
+}
+
+.avaliacao-info {
+    flex: 1;
+}
+
+.avaliacao-nome {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 0 0 5px 0;
+    font-weight: 500;
+}
+
+.avaliacao-data {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.avaliacao-estrelas {
+    color: #ffd700;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.avaliacao-texto {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+.avaliacao-texto::before {
+    content: '"';
+    position: absolute;
+    left: 0;
+    top: -10px;
+    font-size: 3rem;
+    color: rgba(139, 24, 211, 0.3);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.avaliacao-tatuagem {
+    margin-top: 20px;
+    font-style: italic;
+    color: #8b18d3;
+    display: flex;
+    align-items: center;
+}
+
+.avaliacao-tatuagem i {
+    margin-right: 10px;
+}
+
+.cta-avaliacao {
+    text-align: center;
+    margin-top: 80px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(139, 24, 211, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+    border-radius: 15px;
+    border: 1px solid #4b1c76;
+    animation: pulse 2s infinite;
+}
+
+.cta-avaliacao h3 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.cta-avaliacao p {
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+}
+
+.btn-avaliacao {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #8b18d3;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #8b18d3;
+    box-shadow: 0 5px 20px rgba(139, 24, 211, 0.4);
+}
+
+.btn-avaliacao:hover {
+    background: transparent;
+    color: #8b18d3;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(139, 24, 211, 0.6);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(139, 24, 211, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(139, 24, 211, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(139, 24, 211, 0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .avaliacoes-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .avaliacoes-hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .avaliacoes-hero p {
+        font-size: 1.1rem;
+    }
+
+    .avaliacoes-container h2 {
+        font-size: 2rem;
+    }
+
+    .avaliacao-card {
+        padding: 25px;
+    }
+
+    .cta-avaliacao {
+        padding: 30px 20px;
+    }
+
+    .cta-avaliacao h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .avaliacoes-hero {
+        height: 50vh;
+    }
+
+    .avaliacoes-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .avaliacoes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .avaliacao-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avaliacao-avatar {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .cta-avaliacao h3 {
+        font-size: 1.3rem;
+    }
+
+    .btn-avaliacao {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}

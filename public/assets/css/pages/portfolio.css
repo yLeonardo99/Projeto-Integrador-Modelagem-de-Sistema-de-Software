@@ -1,0 +1,429 @@
+/* ESTILOS DE TATTOO */
+
+/* TABELA
+1. AQUARELA: Estilo que imita a técnica de pintura em aquarela coloridos
+2. ESCRITA : Estilo que se concentra em letras e Palavras 
+3. FINE LINE: Estilo que se concentra em linhas finas e desenhos minimalisticos
+4. GEOMÉTRICO: Desenhos complexos e sofisticados
+5. OLD SCHOOL: Desenhos com linhas grossas, imagens e cores vivas
+6. PONTILHISMO: Estilo que se concentra em linhas pontilhadas
+7. REALISTA: Reproduzir imagens reais 
+8. TRIBAL: Estilo inspirados em culturas tribais
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    position: relative;
+    background-color: #000;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Hero Section com Vídeo */
+.portfolio-hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+    margin-top: 100vh;
+    width: 100%;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    letter-spacing: 3px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+.btn-portfolio {
+    background-color: transparent;
+    border: 2px solid #8b18d3;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.btn-portfolio:hover {
+    background-color: #060202;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(139, 24, 211, 0.5);
+}
+
+/* Seção de Estilos */
+.tattoo-styles {
+    padding: 100px 20px;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    width: 100%;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    width: 100%;
+}
+
+.section-header h2 {
+    font-size: 3rem;
+    color: #8b18d3;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 3px;
+    background: #8b18d3;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.style-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 50px;
+    opacity: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.style-container.reverse {
+    flex-direction: row-reverse;
+}
+
+.style-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    min-height: 500px;
+    max-width: 100%;
+}
+
+.style-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.style-container:hover .style-image img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.style-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.zoom-btn {
+    background-color: #8b18d3;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.zoom-btn:hover {
+    transform: scale(1.1);
+    background-color: #6a129f;
+}
+
+.style-content {
+    flex: 1;
+    padding: 20px;
+    max-width: 100%;
+}
+
+.style-content h3 {
+    font-size: 2.2rem;
+    color: #8b18d3;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.style-content h3::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #8b18d3;
+    bottom: -10px;
+    left: 0;
+}
+
+.style-content p {
+    color: #e0e0e0;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.style-meta {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.style-meta span strong {
+    color: #8b18d3;
+}
+
+/* Galeria */
+.gallery-section {
+    padding: 80px 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.gallery-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    height: 300px;
+    position: relative;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 24, 211, 0.3);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow: auto;
+    animation: fadeIn 0.3s;
+}
+
+.modal-content {
+    display: block;
+    margin: 5% auto;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(139, 24, 211, 0.5);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    color: #8b18d3;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+
+    .style-container,
+    .style-container.reverse {
+        flex-direction: column;
+    }
+
+    .style-image {
+        width: 100%;
+        min-height: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .style-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        max-width: 95%;
+    }
+
+    .style-container {
+        padding: 0 10px;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .style-content {
+        padding: 10px;
+    }
+}

@@ -12,11 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
     <!-- Background com efeito parallax -->
+
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
     <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
     <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
@@ -32,64 +34,117 @@
 
     <header>
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            </a>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="orçamentoCliente.html">Orçamento</a></li>
+                <!-- <li><a href="orçamentoCliente.html">Orçamento</a></li> -->
                 <li><a href="avaliações.html">Feedbacks</a></li>
-                <li><a href="agendaCliente.html">Agenda</a></li>
-                <li><a href="#" class="open-btn" onclick="openPopup('loginPopup')">Login</a></li>
+                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Pop-up de Login -->
-    <div id="loginPopup" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('loginPopup')">&times;</span>
-            <h2>Login</h2>
-            <form>
-                <label for="login-email">E-mail:</label>
-                <input type="email" id="login-email" name="email" placeholder="Digite seu e-mail" required>
+    <div class="container-principal">
+        <button class="close-btn">&times;</button>
 
-                <label for="login-password">Senha:</label>
-                <input type="password" id="login-password" name="password" placeholder="Digite sua senha" required>
+        <div class="form-container">
+            <span class="fundo-giratorio"></span>
+            <span class="fundo-giratorio-secundario"></span>
 
-                <button type="submit">Entrar</button>
-            </form>
-            <p class="switch-popup">Não tem uma conta? <a href="#" onclick="switchPopup()">Cadastre-se</a></p>
-        </div>
-    </div>
+            <!-- FORMULÁRIO DE LOGIN -->
 
-    <!-- Pop-up de Cadastro -->
-    <div id="cadastroPopup" class="popup-container">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup('cadastroPopup')">&times;</span>
-            <h2>Cadastrar</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+            <div class="formulario login">
+                <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
 
-                <label for="cadastro-email">E-mail:</label>
-                <input type="email" id="cadastro-email" name="email" placeholder="Digite seu e-mail" required>
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:1; --j:22">
+                        <input type="text" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
 
-                <label for="cadastro-password">Senha:</label>
-                <input type="password" id="cadastro-password" name="password" placeholder="Crie uma senha" required>
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" required class="password-input">
+                        <label for="">Senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
 
-                <label for="confirm-password">Confirmar Senha:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua senha"
-                    required>
+                    <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
 
-                <button type="submit">Cadastrar</button>
-            </form>
+                    <div class="texto-link animacao" style="--i:5; --j:25">
+                        <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO LOGIN -->
+
+            <div class="info-texto login" style="color: white;">
+                <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
+                <p class="animacao" style="--i:1; --j:21">Aqui em nosso studio realizamos Tatto personalizadas</p>
+            </div>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+
+            <div class="formulario cadastro">
+                <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
+
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:18; --j:1">
+                        <input type="text" required>
+                        <label for="">Nome</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:19; --j:2">
+                        <input type="email" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" required class="password-input">
+                        <label for="">Senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" required class="password-input">
+                        <label for="">Confirmar senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+
+                    <!-- <div class="texto-link animacao" style="--i:22; --j:5">
+                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                    </div> -->
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO CADASTRO -->
+
+            <div class="info-texto cadastro" style="color: white;">
+                <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
+                <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
+                    seu orçamento e dê o primeiro passo para realizar a tatuagem dos seus sonhos. Sua história,
+                    eternizada na pele 🖤🎨
+                </p> <br><br><br>
+
+                <div class="texto-link animacao" style="--i:22; --j:5">
+                    <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                </div>
+            </div>
+
         </div>
     </div>
 
     <main>
-
         <section class="hero" id="home">
             <div class="hero-content">
                 <h1>Studio <br> de Tatuagem</h1>
@@ -142,10 +197,8 @@
             </div>
         </section>
 
-
         <section id="espaco" class="espaco">
             <div class="espaco-content">
-                <!-- Primeira linha: Texto à esquerda e imagem à direita -->
                 <div class="linha-superior">
                     <div class="espaco-texto">
                         <h2>Nosso Espaço</h2>
@@ -161,7 +214,6 @@
                     </div>
                 </div>
 
-                <!-- Segunda linha: Informações de contato com mapa -->
                 <div class="linha-inferior">
                     <div class="info-card">
                         <h3>Informações de Contato</h3>
@@ -169,19 +221,16 @@
                         <p><strong>Telefone:</strong> (11) 98765-4321</p>
                         <p><strong>Horário:</strong> Seg-Sex: 10h-20h | Sáb: 10h-18h</p>
 
-                        <!-- Mapa incorporado -->
                         <div class="mapa-container">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197584455393!2d-46.63638992468639!3d-23.5616669788011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a00cc9896b%3A0x4d7fa8becba4e40d!2sR.%20Galv%C3%A3o%20Bueno%2C%20312%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001508-010!5e0!3m2!1spt-BR!2sbr!4v1711569958472!5m2!1spt-BR!2sbr"
                                 width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen=""
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
         <section id="dicas">
             <h2>Dicas para Sua Tatuagem</h2>
@@ -248,7 +297,7 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_API&callback=initMap" async defer></script>
+
 </body>
 
 </html>

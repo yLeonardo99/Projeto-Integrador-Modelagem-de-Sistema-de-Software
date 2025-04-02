@@ -1,1 +1,418 @@
-<h1> Portfólio </h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Tattoo - Portfólio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+
+    <!-- Background com efeito parallax -->
+
+    <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg4" style="background-image: url('assets/images/Fundo-Black4.webp');"></div>
+
+    <!-- Video Carrossel -->
+    <div class="video-carousel">
+        <video id="header-video" autoplay muted loop>
+            <source src="assets/images/video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="portfolio.html">
+                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfólio</a></li>
+                <!-- <li><a href="orçamentoCliente.html">Orçamento</a></li> (Cliente só tera acesso após o login) -->
+                <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container-principal">
+        <button class="close-btn">&times;</button>
+
+        <div class="form-container">
+            <span class="fundo-giratorio"></span>
+            <span class="fundo-giratorio-secundario"></span>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+
+            <div class="formulario login">
+                <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
+
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:1; --j:22">
+                        <input type="text" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" required>
+                        <label for="">Senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
+
+                    <div class="texto-link animacao" style="--i:5; --j:25">
+                        <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO LOGIN -->
+            <div class="info-texto login" style="color: white;">
+                <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
+                <p class="animacao" style="--i:1; --j:21">Aqui em nosso studio realizamos Tatto personalizadas</p>
+            </div>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+
+            <div class="formulario cadastro">
+                <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
+
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:18; --j:1">
+                        <input type="text" required>
+                        <label for="">Nome</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:19; --j:2">
+                        <input type="email" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" required>
+                        <label for="">Senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" required>
+                        <label for="">Confirmar senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+
+                    <div class="texto-link animacao" style="--i:22; --j:5">
+                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO CADASTRO -->
+
+            <div class="info-texto cadastro" style="color: white;">
+                <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
+                <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
+                    seu orçamento e dê o primeiro passo para realizar a tatuagem dos seus sonhos. Sua história,
+                    eternizada na pele 🖤🎨
+                </p> <br><br><br>
+
+                <div class="texto-link animacao" style="--i:22; --j:5">
+                    <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <main>
+        <section class="portfolio-hero">
+            <div class="hero-content animate__animated animate__fadeInUp">
+                <h1>NOSSO PORTFÓLIO</h1>
+                <p>Explore a diversidade de estilos que dominamos e inspire-se para sua próxima tatuagem</p>
+                <a href="#styles" class="btn btn-portfolio">Conheça os Estilos</a>
+            </div>
+        </section>
+
+        <section id="styles" class="tattoo-styles">
+            <div class="section-header">
+                <h2>ESTILOS DE TATUAGEM</h2>
+                <p>Cada estilo tem sua própria história, técnica e beleza única</p>
+            </div>
+
+            <!-- Estilo 1 - Aquarela -->
+
+            <div class="style-container animate__animated animate__fadeInLeft">
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/originals/7e/df/21/7edf21d801591db4f9aafaab34aebfac.jpg"
+                        alt="Tatuagem estilo aquarela">
+
+                </div>
+                <div class="style-content">
+                    <h3>AQUARELA</h3>
+                    <p>Estilo que imita a técnica de pintura em aquarela, caracterizado por cores vibrantes, transições
+                        suaves e efeitos de "pinceladas". As tatuagens em aquarela parecem verdadeiras obras de arte
+                        pintadas na pele, com cores que se misturam e criam um efeito único.</p>
+                    <p>Este estilo é ideal para quem busca uma tatuagem colorida e artística, que se destaque pela sua
+                        fluidez e aparência de pintura. Requer um artista com domínio de técnicas de sombreamento e
+                        mistura de cores.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Alta</span>
+                        <span><strong>Durabilidade:</strong> Média (cores podem desbotar mais rápido)</span>
+                        <span><strong>Indicado para:</strong> Grandes áreas como costas, coxas e braços</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estilo 2 - Escrita -->
+
+            <div class="style-container reverse animate__animated animate__fadeInRight">
+                <div class="style-content">
+                    <h3>ESCRITA</h3>
+                    <p>Estilo que se concentra em letras e palavras, podendo variar desde caligrafias elegantes até
+                        fontes mais ousadas. As tatuagens de escrita podem incluir citações inspiradoras, nomes, datas
+                        significativas ou palavras em diferentes idiomas.</p>
+                    <p>A precisão é fundamental neste estilo, pois cada curva e traço da letra deve ser impecável. A
+                        escolha da fonte e o posicionamento são tão importantes quanto o conteúdo do texto.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Média (dependendo da complexidade da fonte)</span>
+                        <span><strong>Durabilidade:</strong> Alta (especialmente em preto)</span>
+                        <span><strong>Indicado para:</strong> Antebraços, pulsos, costelas e atrás da orelha</span>
+                    </div>
+                </div>
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/f4/63/42/f463427907288671ceb631d38c877750.jpg"
+                        alt="Tatuagem estilo escrita">
+                </div>
+            </div>
+
+            <!-- Estilo 3 - Fine Line -->
+
+            <div class="style-container animate__animated animate__fadeInLeft">
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/44/51/b2/4451b278d525396a964a5002a177a905.jpg"
+                        alt="Tatuagem estilo fine line">
+                </div>
+                <div class="style-content">
+                    <h3>FINE LINE</h3>
+                    <p>Estilo que se concentra em linhas finas e desenhos minimalistas, criando peças delicadas e
+                        precisas. As tatuagens em fine line são conhecidas por sua elegância e sutileza, muitas vezes
+                        parecendo desenhos a lápis na pele.</p>
+                    <p>Este estilo é perfeito para quem busca uma tatuagem discreta mas impactante, com detalhes que
+                        chamam atenção pela precisão. Requer mãos firmes e agulhas muito finas para alcançar o resultado
+                        desejado.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Alta (exige extrema precisão)</span>
+                        <span><strong>Durabilidade:</strong> Média (linhas muito finas podem desbotar com o
+                            tempo)</span>
+                        <span><strong>Indicado para:</strong> Áreas pequenas como pulsos, tornozelos e costelas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estilo 4 - Geométrico -->
+
+            <div class="style-container reverse animate__animated animate__fadeInRight">
+                <div class="style-content">
+                    <h3>GEOMÉTRICO</h3>
+                    <p>Desenhos complexos e sofisticados baseados em formas geométricas, simetria e padrões precisos. As
+                        tatuagens geométricas podem incluir mandalas, padrões sagrados ou composições abstratas que
+                        brincam com a percepção espacial.</p>
+                    <p>Este estilo exige um senso matemático de proporção e simetria, onde cada linha e ângulo deve ser
+                        perfeito. Muitas vezes incorpora elementos da natureza ou significados espirituais dentro das
+                        formas geométricas.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Média/Alta (dependendo da complexidade)</span>
+                        <span><strong>Durabilidade:</strong> Alta (formas bem definidas envelhecem bem)</span>
+                        <span><strong>Indicado para:</strong> Costas, peito, braços e pernas</span>
+                    </div>
+                </div>
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/a4/86/a3/a486a3665d8819b2120c0b3afcde44be.jpg"
+                        alt="Tatuagem estilo geométrico">
+                </div>
+            </div>
+
+            <!-- Estilo 5 - Old School -->
+
+            <div class="style-container animate__animated animate__fadeInLeft">
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/cb/f3/b9/cbf3b9b20f98f059f8e50a346bce0162.jpg"
+                        alt="Tatuagem estilo old school">
+                </div>
+                <div class="style-content">
+                    <h3>OLD SCHOOL</h3>
+                    <p>Desenhos com linhas grossas, imagens icônicas e cores vivas, inspirado nas tatuagens tradicionais
+                        americanas dos anos 50. Este estilo clássico inclui âncoras, rosas, andorinhas, pin-ups e outros
+                        símbolos tradicionais.</p>
+                    <p>As tatuagens old school são atemporais e reconhecíveis por seu contorno preto espesso e cores
+                        primárias sólidas. É um estilo que envelhece muito bem na pele, mantendo sua vivacidade ao longo
+                        dos anos.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Média (técnica tradicional bem estabelecida)</span>
+                        <span><strong>Durabilidade:</strong> Alta (cores fortes e linhas grossas duram muito)</span>
+                        <span><strong>Indicado para:</strong> Braços, pernas, peito e costas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estilo 6 - Pontilhismo -->
+
+            <div class="style-container reverse animate__animated animate__fadeInRight">
+                <div class="style-content">
+                    <h3>PONTILHISMO</h3>
+                    <p>Estilo que se concentra em linhas pontilhadas, criando imagens através da acumulação de pequenos
+                        pontos. O pontilhismo pode criar desde sombras sutis até imagens completas, com efeitos
+                        impressionantes de luz e sombra.</p>
+                    <p>Esta técnica exige paciência e precisão, pois cada ponto deve ser cuidadosamente colocado para
+                        criar o efeito desejado. O resultado final muitas vezes parece uma imagem em gravura ou estampa.
+                    </p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Alta (exige muita paciência e precisão)</span>
+                        <span><strong>Durabilidade:</strong> Média/Alta (depende da densidade dos pontos)</span>
+                        <span><strong>Indicado para:</strong> Qualquer área, especialmente braços e costas</span>
+                    </div>
+                </div>
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/7d/2a/0d/7d2a0d2cefa4347dd7ebf5b140869d7f.jpg"
+                        alt="Tatuagem estilo pontilhismo">
+                </div>
+            </div>
+
+            <!-- Estilo 7 - Realista -->
+
+            <div class="style-container animate__animated animate__fadeInLeft">
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/dc/96/b5/dc96b54ae7d551510c267b920b43b99b.jpg"
+                        alt="Tatuagem estilo realista">
+                </div>
+                <div class="style-content">
+                    <h3>REALISTA</h3>
+                    <p>Estilo que busca reproduzir imagens reais com o máximo de fidelidade, incluindo retratos, animais
+                        e paisagens. As tatuagens realistas parecem fotografias na pele, com detalhes impressionantes de
+                        luz, sombra e textura.</p>
+                    <p>Este é um dos estilos mais desafiadores, exigindo um domínio avançado de técnicas de sombreamento
+                        e perspectiva. O realismo pode ser feito em preto e cinza ou colorido, dependendo do efeito
+                        desejado.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Muito Alta (exige habilidades artísticas avançadas)</span>
+                        <span><strong>Durabilidade:</strong> Média/Alta (depende da técnica e cuidados)</span>
+                        <span><strong>Indicado para:</strong> Grandes áreas como costas, peito e coxas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Estilo 8 - Tribal -->
+
+            <div class="style-container reverse animate__animated animate__fadeInRight">
+                <div class="style-content">
+                    <h3>TRIBAL</h3>
+                    <p>Estilo inspirado em culturas tribais de todo o mundo, com padrões intrincados e significados
+                        profundos. As tatuagens tribais podem ser baseadas em designs Maori, Polinésios, Haida ou outras
+                        tradições indígenas.</p>
+                    <p>Este estilo é caracterizado por padrões de linhas grossas e curvas que fluem com a anatomia do
+                        corpo. Cada elemento tem um significado específico, tornando cada peça única e pessoal.</p>
+                    <div class="style-meta">
+                        <span><strong>Dificuldade:</strong> Média (requer conhecimento dos padrões culturais)</span>
+                        <span><strong>Durabilidade:</strong> Alta (linhas grossas envelhecem muito bem)</span>
+                        <span><strong>Indicado para:</strong> Braços, pernas, costas e peito</span>
+                    </div>
+                </div>
+                <div class="style-image">
+                    <img src="https://i.pinimg.com/474x/e2/05/09/e2050920e6378031e5fda4cbf23f7e58.jpg"
+                        alt="Tatuagem estilo tribal">
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="section-header">
+                <h2>GALERIA DE TRABALHOS</h2>
+                <p>Confira alguns dos nossos melhores trabalhos realizados</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/474x/67/31/60/6731606ea465ec718261ebc613d1f80e.jpg" alt="Tatuagem 1">
+                </div>
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/736x/1c/04/d7/1c04d76b1f32680d28181c09ecd3ea1b.jpg" alt="Tatuagem 2">
+                </div>
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/736x/4f/c1/ce/4fc1ce60d5a76906c85da7e6ec8294c7.jpg" alt="Tatuagem 3">
+                </div>
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/474x/48/21/50/482150751a9907f8f56fadad9b72061c.jpg" alt="Tatuagem 4">
+                </div>
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/474x/5c/c7/c8/5cc7c85150d628b24134e7d44b19ae14.jpg" alt="Tatuagem 5">
+                </div>
+                <div class="gallery-item animate__animated animate__zoomIn">
+                    <img src="https://i.pinimg.com/474x/4f/8b/7d/4f8b7d1d9f9a142e26a990f7ef460849.jpg" alt="Tatuagem 6">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 10h - 20h</p>
+                <p>Sábado: 10h - 18h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@studiotattoo.com</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <div class="contato-opcoes">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Localização</h3>
+                <p>Bairro da Liberdade</p>
+                <p>Rua Galvão Bueno, 312</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

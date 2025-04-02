@@ -1,82 +1,266 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orçamento - Studio Tattoo</title>
-    <link rel="stylesheet" href="assets/css/style.css"> <!-- Conectando o mesmo CSS -->
-
+    <title>Studio Tattoo - Solicitar Orçamento</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon"> 
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
+    <!-- Background com efeito parallax -->
+
+    <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg4" style="background-image: url('assets/images/Fundo-Black4.webp');"></div>
+
     <header>
         <div class="logo">
-            <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfólio</a></li>
-                <li><a href="orçamentoCliente.html">Orçamento</a></li>
+                <li><a href="orçamentoCliente.html" class="active">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
-                <li><a href="agendaCliente.html">Agenda</a></li>
+                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
             </ul>
         </nav>
     </header>
 
+
+    <div class="container-principal">
+        <button class="close-btn">&times;</button>
+
+        <div class="form-container">
+            <span class="fundo-giratorio"></span>
+            <span class="fundo-giratorio-secundario"></span>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+
+            <div class="formulario login">
+                <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
+
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:1; --j:22">
+                        <input type="text" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" required>
+                        <label for="">Senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
+
+                    <div class="texto-link animacao" style="--i:5; --j:25">
+                        <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO LOGIN -->
+            <div class="info-texto login" style="color: white;">
+                <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
+                <p class="animacao" style="--i:1; --j:21">Aqui em nosso studio realizamos Tatto personalizadas</p>
+            </div>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+
+            <div class="formulario cadastro">
+                <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
+
+                <form action="#">
+                    <div class="campo-input animacao" style="--i:18; --j:1">
+                        <input type="text" required>
+                        <label for="">Nome</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:19; --j:2">
+                        <input type="email" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" required>
+                        <label for="">Senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" required>
+                        <label for="">Confirmar senha</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+
+                    <div class="texto-link animacao" style="--i:22; --j:5">
+                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO CADASTRO -->
+
+            <div class="info-texto cadastro" style="color: white;">
+                <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
+                <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
+                    seu orçamento e dê o primeiro passo para realizar a tatuagem dos seus sonhos. Sua história,
+                    eternizada na pele 🖤🎨
+                </p> <br><br><br>
+
+                <div class="texto-link animacao" style="--i:22; --j:5">
+                    <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <main>
-        <h1>Orçamento de Tatuagem</h1>
+        <section class="orcamento-hero">
+            <div class="hero-content">
+                <h1>Solicite seu <br>Orçamento</h1>
+                <p>Preencha o formulário abaixo para receber uma proposta personalizada</p>
+            </div>
+        </section>
 
-        <form class="orcamento">
-            <h2>Informações do Cliente</h2>
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome"><br><br>
+        <section id="formulario-orcamento">
+            <div class="orcamento-container">
+                <form id="form-orcamento">
+                    <h2>Informações para Orçamento</h2>
 
-            <label for="idade">Idade:</label><br>
-            <input type="number" id="idade" name="idade"><br><br>
+                    <div class="form-group">
+                        <label for="nome-cliente">Nome Completo*</label>
+                        <input type="text" id="nome-cliente" name="nome-cliente" required>
+                    </div>
 
-            <label for="condicoes_medicas">Condições Médicas:</label><br>
-            <input id="condicoes_medicas" name="condicoes_medicas" placeholder="(Alergia ou problemas de pele)"></input><br><br>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email-cliente">E-mail*</label>
+                            <input type="email" id="email-cliente" name="email-cliente" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone-cliente">Telefone*</label>
+                            <input type="tel" id="telefone-cliente" name="telefone-cliente" required>
+                        </div>
+                    </div>
 
-            <h2>Informações da Tatuagem</h2>
-            <label for="local_corpo">Local do Corpo:</label><br>
-            <input type="text" id="local_corpo" name="local_corpo"><br><br>
+                    <div class="form-group">
+                        <label for="estilo-tatuagem">Estilo da Tatuagem*</label>
+                        <select id="estilo-tatuagem" name="estilo-tatuagem" required>
+                            <option value="" disabled selected>Selecione o estilo...</option>
+                            <option value="aquarela">Aquarela</option>
+                            <option value="realista">Realista</option>
+                            <option value="tradicional">Tradicional</option>
+                            <option value="minimalista">Minimalista</option>
+                            <option value="geometrica">Geométrica</option>
+                            <option value="japonesa">Japonesa (Irezumi)</option>
+                            <option value="blackwork">Blackwork</option>
+                            <option value="outro">Outro (descreva abaixo)</option>
+                        </select>
+                    </div>
 
-            <label for="estilo_tatuagem">Estilo da Tatuagem:</label><br>
-            <input type="text" id="estilo_tatuagem" name="estilo_tatuagem"><br><br>
+                    <div class="form-group" id="outro-estilo-container" style="display:none;">
+                        <label for="outro-estilo">Descreva o estilo desejado*</label>
+                        <textarea id="outro-estilo" name="outro-estilo" rows="3"></textarea>
+                    </div>
 
-            <label for="tamanho_tatuagem">Tamanho da Tatuagem:</label><br>
-            <input type="number" id="tamanho_tatuagem" name="tamanho_tatuagem" placeholder="Cm"><br><br>
+                    <div class="form-group">
+                        <label for="descricao-tatuagem">Descreva sua ideia com detalhes*</label>
+                        <textarea id="descricao-tatuagem" name="descricao-tatuagem" rows="5" required
+                            placeholder="Fale sobre o que você deseja tatuar, tamanho aproximado, local do corpo, cores preferidas, elementos importantes, significado, etc."></textarea>
+                    </div>
 
-            <!-- <h2>Informações do Orçamento</h2>
-            <label for="preco">Preço:</label><br>
-            <input type="text" id="preco" name="preco"><br><br>
+                    <button type="submit" class="btn-enviar">Enviar Solicitação</button>
+                </form>
+            </div>
+        </section>
 
-            <label for="forma_pagamento">Forma de Pagamento:</label><br>
-            <input type="text" id="forma_pagamento" name="forma_pagamento"><br><br>
-
-            <label for="prazo_conclusao">Prazo Estimado de Conclusão:</label><br>
-            <input type="text" id="prazo_conclusao" name="prazo_conclusao"><br><br> -->
-
-            <input type="submit" value="Enviar Orçamento">
-        </form>
+        <section id="info-orcamento">
+            <div class="info-container">
+                <h2>Como funciona nosso processo</h2>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">1</div>
+                        <h3>Solicitação</h3>
+                        <p>Preencha o formulário com detalhes sobre sua ideia de tatuagem.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">2</div>
+                        <h3>Análise</h3>
+                        <p>Nossa equipe avalia sua proposta e entra em contato em até 48h.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">3</div>
+                        <h3>Orçamento</h3>
+                        <p>Enviaremos uma proposta detalhada com valor e prazo estimado.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">4</div>
+                        <h3>Agendamento</h3>
+                        <p>Após aprovação, marcamos sua sessão com pagamento de sinal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <div class="contato-opcoes">
-            <a href="https://web.whatsapp.com/" target="_blank">
-                <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
-            </a>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 10h - 20h</p>
+                <p>Sábado: 10h - 18h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@studiotattoo.com</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <div class="contato-opcoes">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Localização</h3>
+                <p>Bairro da Liberdade</p>
+                <p>Rua Galvão Bueno, 312</p>
+                <p>São Paulo - SP</p>
+            </div>
         </div>
-        <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script src="assets/js/script.js"></script>
+
+
 </body>
+
 </html>

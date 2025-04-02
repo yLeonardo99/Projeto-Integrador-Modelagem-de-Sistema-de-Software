@@ -15,7 +15,7 @@ Aqui está o passo a passo para contribuir diretamente na branch **main**. Vamos
 Primeiro, vamos copiar o repositório para o seu computador. Abra o terminal (ou prompt de comando) e execute o comando abaixo:
 
 ```bash
-git clone https://github.com/seu-usuario](https://github.com/LuMedeir/Projeto-Integrador-Modelagem-de-Sistema-de-Software.git nome_da_pasta
+git clone https://github.com/seu-usuario](https://github.com/yLeonardo99/Projeto-Integrador-Modelagem-de-Sistema-de-Software.git nome_da_pasta
 ```
 
 ### 2. Acessar a Pasta do Repositório:
