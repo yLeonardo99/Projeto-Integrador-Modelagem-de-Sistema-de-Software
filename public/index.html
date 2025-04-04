@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -47,6 +46,7 @@
                 <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
             </ul>
         </nav>
+
     </header>
 
     <div class="container-principal">
@@ -150,10 +150,36 @@
                 <h1>Studio <br> de Tatuagem</h1>
                 <h2>Bem-vindo ao Studio Stfin</h2>
                 <p>Transforme suas ideias em arte</p>
-                <a href="orçamentoCliente.html" class="btn">Solicite um orçamento!</a>
+                <a href="portfolio.html" class="btn">Veja um pouco sobre nosso Trabalho !</a>
             </div>
             <img src="assets/images/image.png" alt="Imagem representativa do Studio Tattoo" />
         </section>
+
+        <!-- ANUNCIO PARA O USUÁRIO - PASSO A PASSO PARA REALIZAR UM ORÇAMENTO -->
+
+        <section id="orcamento-info">
+            <div class="info-card orcamento-card">
+                <h3>Como solicitar seu orçamento</h3>
+                <p>Para solicitar um orçamento personalizado, você precisa ter uma conta cadastrada em nosso sistema.</p>
+                <div class="orcamento-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Se você já é cliente, faça <a href="#" onclick="openLogin()">login aqui</a></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Se é sua primeira vez, <a href="#" class="link-cadastro" onclick="openRegister()">cadastre-se agora</a></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Após o login, você será redirecionado automaticamente para a página de orçamento</p>
+                    </div>
+                </div>
+                <a href="orçamentoCliente.html" class="btn btn-orcamento" style="display: none;" id="orcamento-btn">Acessar Orçamento</a>
+            </div>
+        </section>
+
+        <!-- FIM -->
 
         <section id="sobre">
             <div class="sobre-container">

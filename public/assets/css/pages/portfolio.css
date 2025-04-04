@@ -1,15 +1,66 @@
-/* ESTILOS DE TATTOO */
+:root {
+    /* Cores principais */
 
-/* TABELA
+    --primary-color: #8b18d3;
+    --primary-color-dark: #6a129f;
+    --primary-color-transparent: rgba(139, 24, 211, 0.3);
+    --primary-color-shadow: rgba(139, 24, 211, 0.5);
+
+    /* Cores de texto */
+
+    --text-white: #fff;
+    --text-light: #e0e0e0;
+    --text-gray: #ccc;
+    --text-dark: #060202;
+
+    /* Cores de fundo */
+
+    --bg-black: #000;
+    --bg-dark: rgba(0, 0, 0, 0.7);
+    --bg-darker: rgba(0, 0, 0, 0.8);
+    --bg-darkest: rgba(0, 0, 0, 0.85);
+    --bg-overlay: rgba(0, 0, 0, 0.3);
+    --bg-modal: rgba(0, 0, 0, 0.9);
+
+    /* Sombras */
+
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-dark: 0 15px 40px rgba(0, 0, 0, 0.6);
+    --shadow-primary: 0 15px 40px rgba(139, 24, 211, 0.3);
+    --shadow-btn: 0 10px 25px rgba(139, 24, 211, 0.5);
+    --shadow-modal: 0 0 30px rgba(139, 24, 211, 0.5);
+
+    /* Tamanhos */
+
+    --max-width-container: 1200px;
+    --border-radius: 10px;
+    --border-radius-btn: 30px;
+    --border-radius-circle: 50%;
+}
+
+/* ------------------------------------------------------------------------- ANOTAÇÃO; ESTILOS DE TATTOO ---------------------------------------------------------*/
+
+/*  *****************************************************************************  TABELA **********************************************************************
+
 1. AQUARELA: Estilo que imita a técnica de pintura em aquarela coloridos
+
 2. ESCRITA : Estilo que se concentra em letras e Palavras 
+
 3. FINE LINE: Estilo que se concentra em linhas finas e desenhos minimalisticos
+
 4. GEOMÉTRICO: Desenhos complexos e sofisticados
+
 5. OLD SCHOOL: Desenhos com linhas grossas, imagens e cores vivas
+
 6. PONTILHISMO: Estilo que se concentra em linhas pontilhadas
+
 7. REALISTA: Reproduzir imagens reais 
+
 8. TRIBAL: Estilo inspirados em culturas tribais
+
 */
+
 
 * {
     box-sizing: border-box;
@@ -20,9 +71,9 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: var(--text-white);
     position: relative;
-    background-color: #000;
+    background-color: var(--bg-black);
     line-height: 1.6;
     overflow-x: hidden;
     width: 100%;
@@ -43,9 +94,9 @@ body {
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: var(--bg-dark);
     padding: 40px;
-    border-radius: 15px;
+    border-radius: var(--border-radius);
     max-width: 800px;
     width: 100%;
     margin: 0 auto;
@@ -54,7 +105,7 @@ body {
 .hero-content h1 {
     font-size: 4.5rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--text-white);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     letter-spacing: 3px;
 }
@@ -62,29 +113,31 @@ body {
 .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
-    color: #e0e0e0;
+    color: var(--text-light);
 }
 
 .btn-portfolio {
     background-color: transparent;
-    border: 2px solid #8b18d3;
-    color: #fff;
+    border: 2px solid var(--primary-color);
+    color: var(--text-white);
     padding: 15px 40px;
     font-size: 1.1rem;
     transition: all 0.4s ease;
     cursor: pointer;
+    border-radius: var(--border-radius-btn);
 }
 
 .btn-portfolio:hover {
-    background-color: #060202;
+    background-color: var(--text-dark);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(139, 24, 211, 0.5);
+    box-shadow: var(--shadow-btn);
 }
 
 /* Seção de Estilos */
+
 .tattoo-styles {
     padding: 100px 20px;
-    background-color: rgba(0, 0, 0, 0.85);
+    background-color: var(--bg-darkest);
     position: relative;
     width: 100%;
 }
@@ -97,7 +150,7 @@ body {
 
 .section-header h2 {
     font-size: 3rem;
-    color: #8b18d3;
+    color: var(--primary-color);
     margin-bottom: 15px;
     position: relative;
 }
@@ -107,7 +160,7 @@ body {
     position: absolute;
     width: 100px;
     height: 3px;
-    background: #8b18d3;
+    background: var(--primary-color);
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -115,7 +168,7 @@ body {
 
 .section-header p {
     font-size: 1.2rem;
-    color: #ccc;
+    color: var(--text-gray);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -126,7 +179,7 @@ body {
     margin-bottom: 80px;
     gap: 50px;
     opacity: 0;
-    max-width: 1200px;
+    max-width: var(--max-width-container);
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
@@ -140,8 +193,8 @@ body {
     flex: 1;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-dark);
     min-height: 500px;
     max-width: 100%;
 }
@@ -163,7 +216,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--bg-overlay);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,24 +229,24 @@ body {
 }
 
 .zoom-btn {
-    background-color: #8b18d3;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--text-white);
     border: none;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
+    border-radius: var(--border-radius-circle);
     font-size: 1.8rem;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-light);
 }
 
 .zoom-btn:hover {
     transform: scale(1.1);
-    background-color: #6a129f;
+    background-color: var(--primary-color-dark);
 }
 
 .style-content {
@@ -204,7 +257,7 @@ body {
 
 .style-content h3 {
     font-size: 2.2rem;
-    color: #8b18d3;
+    color: var(--primary-color);
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -215,13 +268,13 @@ body {
     position: absolute;
     width: 50%;
     height: 3px;
-    background: #8b18d3;
+    background: var(--primary-color);
     bottom: -10px;
     left: 0;
 }
 
 .style-content p {
-    color: #e0e0e0;
+    color: var(--text-light);
     margin-bottom: 20px;
     font-size: 1.1rem;
     line-height: 1.7;
@@ -232,18 +285,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: #ccc;
+    color: var(--text-gray);
     font-size: 0.95rem;
 }
 
 .style-meta span strong {
-    color: #8b18d3;
+    color: var(--primary-color);
 }
 
 /* Galeria */
 .gallery-section {
     padding: 80px 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--bg-darker);
     width: 100%;
 }
 
@@ -251,16 +304,16 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
-    max-width: 1200px;
+    max-width: var(--max-width-container);
     margin: 0 auto;
     width: 100%;
     padding: 0 20px;
 }
 
 .gallery-item {
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-medium);
     transition: all 0.3s ease;
     height: 300px;
     position: relative;
@@ -291,7 +344,7 @@ body {
 
 .gallery-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(139, 24, 211, 0.3);
+    box-shadow: var(--shadow-primary);
 }
 
 .gallery-item:hover img {
@@ -299,6 +352,7 @@ body {
 }
 
 /* Modal */
+
 .modal {
     display: none;
     position: fixed;
@@ -307,7 +361,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--bg-modal);
     overflow: auto;
     animation: fadeIn 0.3s;
 }
@@ -318,14 +372,14 @@ body {
     max-width: 90%;
     max-height: 80%;
     border-radius: 5px;
-    box-shadow: 0 0 30px rgba(139, 24, 211, 0.5);
+    box-shadow: var(--shadow-modal);
 }
 
 .close-modal {
     position: absolute;
     top: 20px;
     right: 35px;
-    color: #fff;
+    color: var(--text-white);
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -333,7 +387,7 @@ body {
 }
 
 .close-modal:hover {
-    color: #8b18d3;
+    color: var(--primary-color);
 }
 
 #caption {
@@ -342,7 +396,7 @@ body {
     width: 80%;
     max-width: 700px;
     text-align: center;
-    color: #ccc;
+    color: var(--text-gray);
     padding: 10px 0;
     font-size: 1.2rem;
 }
