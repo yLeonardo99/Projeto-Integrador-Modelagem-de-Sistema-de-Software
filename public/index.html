@@ -60,27 +60,28 @@
 
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
-
-                <form action="#">
+            
+                <form action="backend/login.php" method="POST">
                     <div class="campo-input animacao" style="--i:1; --j:22">
-                        <input type="text" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-user'></i>
                     </div>
-
+            
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
-
+            
                     <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
-
+            
                     <div class="texto-link animacao" style="--i:5; --j:25">
                         <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
                     </div>
                 </form>
             </div>
+            
 
             <!-- INFORMAÇÕES DO LOGIN -->
 
@@ -94,33 +95,34 @@
             <div class="formulario cadastro">
                 <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
 
-                <form action="#">
+                <form method="POST" action="backend/cadastro.php">
                     <div class="campo-input animacao" style="--i:18; --j:1">
-                        <input type="text" required>
+                        <input type="text" name="nome" required>
                         <label for="">Nome</label>
                         <i class='bx bxs-user'></i>
                     </div>
-
+                
                     <div class="campo-input animacao" style="--i:19; --j:2">
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-envelope'></i>
                     </div>
-
+                
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
-
+                
                     <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="confirmar_senha" required class="password-input">
                         <label for="">Confirmar senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
-
+                
                     <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
-
+                </form>
+                
                     <!-- <div class="texto-link animacao" style="--i:22; --j:5">
                         <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
                     </div> -->
