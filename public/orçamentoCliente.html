@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -38,6 +39,15 @@
                 <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
+
+        <!-- MENU HAMBURGUER - Mobile -->
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
     <div class="container-principal">
@@ -199,7 +209,8 @@
                     <div class="info-card">
                         <div class="info-icon">1</div>
                         <h3>Solicitação</h3>
-                        <p>Preencha o formulário com detalhes sobre sua ideia de tatuagem.</p>
+                        <p> Faça seu LOGIN ou CADASTRAR-SE após Preencha o formulário com detalhes sobre sua ideia de
+                            tatuagem.</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">2</div>
@@ -256,11 +267,12 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
 
     <script>
 
         // Se o Usuário estiver logado, mostrar o formulário de orçamento caso contrário, mostrar a mensagem para fazer login
-      
+
         document.addEventListener('DOMContentLoaded', function () {
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
 

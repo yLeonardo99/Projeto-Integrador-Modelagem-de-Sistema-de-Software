@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -47,6 +48,13 @@
                 <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
+
+        <!-- MENU HAMBURGUER - Mobile -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
 
     </header>
 
@@ -327,9 +335,10 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
     <script>
         // Ouvinte para mensagens entre páginas
-        window.addEventListener('message', function(event) {
+        window.addEventListener('message', function (event) {
             if (event.data === 'updateLoginStatus') {
                 updateLoginButtons();
             }
