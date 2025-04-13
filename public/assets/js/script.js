@@ -224,6 +224,7 @@ dodocument.addEventListener('DOMContentLoaded', function () {
 /* ---------------------------------------------------------- ORÇAMENTO CLIENTE --------------------------------------------------*/
 
 // Mostrar campo "Outro" quando selecionado
+
 document.getElementById('estilo-tatuagem').addEventListener('change', function () {
     const outroContainer = document.getElementById('outro-estilo-container');
     outroContainer.style.display = this.value === 'outro' ? 'block' : 'none';
@@ -305,10 +306,11 @@ function openRegister() {
 }
 
 // Verificar se o usuário está logado (simulação)
+
 function checkLoggedIn() {
     const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
     const orcamentoBtn = document.getElementById('orcamento-btn');
-    
+
     if (isLoggedIn) {
         orcamentoBtn.style.display = 'inline-block';
     } else {
@@ -317,9 +319,10 @@ function checkLoggedIn() {
 }
 
 // Chamar a função quando a página carregar
+
 window.addEventListener('load', checkLoggedIn);
 
-document.querySelector('.formulario.login form').addEventListener('submit', function(e) {
+document.querySelector('.formulario.login form').addEventListener('submit', function (e) {
     e.preventDefault();
     localStorage.setItem('isLoggedIn', 'true');
     checkLoggedIn();

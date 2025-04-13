@@ -20,7 +20,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Preencha todos os campos.");
     }
 
-    // consulta 
     $stmt = $conn->prepare("SELECT id, nome, email, senha FROM usuarios WHERE email = ?");
     $stmt->bind_param("s", $email);
     $stmt->execute();
@@ -29,20 +28,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($resultado->num_rows === 1) {
         $usuario = $resultado->fetch_assoc();
 
-        // Verifica a senha com hash
         if (password_verify($senha, $usuario['senha'])) {
             $_SESSION['usuario'] = $usuario['email'];
-            header("Location: ../orçamentoCliente.html"); // manda pra tela do orçamento
+            $stmt->close(); // <-- FECHA ANTES DO EXIT
+
+            echo "<script>
+localStorage.setItem('isLoggedIn', 'true');
+// Força a atualização dos botões em todas as páginas
+if (window.opener) {
+    window.opener.postMessage('updateLoginStatus', '*');
+}
+window.location.href = '../../public/orçamentoCliente.html';
+</script>";
             exit();
         } else {
-            echo "Senha incorreta.";
+            $stmt->close();
+            echo "<script>alert('Senha incorreta.'); window.history.back();</script>";
+            exit();
         }
     } else {
-        echo "Usuário não encontrado.";
+        $stmt->close();
+        echo "<script>alert('Usuário não encontrado.'); window.history.back();</script>";
+        exit();
     }
-
-    $stmt->close();
 }
 
 $conn->close();
-?>

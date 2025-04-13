@@ -9,16 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
     <!-- Background com efeito parallax -->
-
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
     <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
     <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
@@ -36,11 +34,11 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html" class="active">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
-                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
     </header>
-
 
     <div class="container-principal">
         <button class="close-btn">&times;</button>
@@ -50,32 +48,30 @@
             <span class="fundo-giratorio-secundario"></span>
 
             <!-- FORMULÁRIO DE LOGIN -->
-
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
-            
-                <form action="verifica_login.php" method="POST">
-            
+
+                <form action="../backend/php/login.php" method="POST">
                     <div class="campo-input animacao" style="--i:1; --j:22">
-                        <input type="text" name="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-user'></i>
                     </div>
-            
+
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" name="senha" required>
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
-            
+
                     <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
-            
+
                     <div class="texto-link animacao" style="--i:5; --j:25">
                         <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
                     </div>
                 </form>
             </div>
-            
+
             <!-- INFORMAÇÕES DO LOGIN -->
             <div class="info-texto login" style="color: white;">
                 <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
@@ -83,45 +79,39 @@
             </div>
 
             <!-- FORMULÁRIO DE CADASTRO -->
-
             <div class="formulario cadastro">
                 <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
 
-                <form action="#">
+                <form method="POST" action="../backend/php/cadastro.php">
                     <div class="campo-input animacao" style="--i:18; --j:1">
-                        <input type="text" required>
+                        <input type="text" name="nome" required>
                         <label for="">Nome</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:19; --j:2">
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-envelope'></i>
                     </div>
 
-                    <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                        <input type="password" name="confirmar_senha" required class="password-input">
                         <label for="">Confirmar senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
-
-                    <div class="texto-link animacao" style="--i:22; --j:5">
-                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
-                    </div>
                 </form>
             </div>
 
             <!-- INFORMAÇÕES DO CADASTRO -->
-
             <div class="info-texto cadastro" style="color: white;">
                 <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
                 <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
@@ -133,7 +123,6 @@
                     <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -147,7 +136,13 @@
 
         <section id="formulario-orcamento">
             <div class="orcamento-container">
-                <form id="form-orcamento">
+                <div id="login-message" class="login-message" style="display: none;">
+                    <span>Para o preenchimento do formulário você deve <a href="#" onclick="openLogin()"
+                            class="highlight-link">fazer um login</a> ou <a href="#"
+                            class="link-cadastro highlight-link" onclick="openRegister()">cadastrar-se</a>.</span>
+                </div>
+
+                <form id="form-orcamento" style="display: none;">
                     <h2>Informações para Orçamento</h2>
 
                     <div class="form-group">
@@ -260,8 +255,35 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/orçamentoCliente.js"></script>
 
+    <script>
 
+        // Se o Usuário estiver logado, mostrar o formulário de orçamento caso contrário, mostrar a mensagem para fazer login
+      
+        document.addEventListener('DOMContentLoaded', function () {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+
+            if (isLoggedIn) {
+                document.getElementById('form-orcamento').style.display = 'block';
+                document.getElementById('login-message').style.display = 'none';
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('logout-btn').style.display = 'block';
+            } else {
+                document.getElementById('form-orcamento').style.display = 'none';
+                document.getElementById('login-message').style.display = 'block';
+            }
+        });
+
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            window.location.href = 'index.html';
+        }
+        document.getElementById('estilo-tatuagem').addEventListener('change', function () {
+            const outroContainer = document.getElementById('outro-estilo-container');
+            outroContainer.style.display = this.value === 'outro' ? 'block' : 'none';
+        });
+    </script>
 </body>
 
 </html>

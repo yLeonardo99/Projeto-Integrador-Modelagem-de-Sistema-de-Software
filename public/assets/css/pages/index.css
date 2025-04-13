@@ -1258,3 +1258,22 @@ form .texto-link {
         width: 100%;
     }
 }
+
+/* ------------------------------------------------------ Botão Sair ---------------------------------------------------------- */
+
+/* Estilo para o botão Sair */
+
+#logout-btn a {
+    color: #ff6b6b;
+    background-color: transparent;
+    border: 1px solid #ff6b6b;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+#logout-btn a:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+    text-decoration: none;
+}
+
