@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Tattoo - Arte em Pele</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <!-- Background com efeito parallax -->
+
+    <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
+    <div class="parallax-bg" id="parallax-bg4" style="background-image: url('assets/images/Fundo-Black4.webp');"></div>
+
+    <!-- Video Carrossel -->
+
+    <div class="video-carousel">
+        <video id="header-video" autoplay muted loop>
+            <source src="assets/images/video.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="orçamentoCliente.html">Orçamento</a></li>
+                <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENU HAMBURGUER - Mobile -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
+
+    <div class="container-principal">
+        <button class="close-btn">&times;</button>
+
+        <div class="form-container">
+            <span class="fundo-giratorio"></span>
+            <span class="fundo-giratorio-secundario"></span>
+
+            <!-- FORMULÁRIO DE LOGIN -->
+
+            <div class="formulario login">
+                <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
+
+                <form action="../backend/php/login.php" method="POST">
+                    <div class="campo-input animacao" style="--i:1; --j:22">
+                        <input type="email" name="email" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" name="senha" required class="password-input">
+                        <label for="">Senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
+
+                    <div class="texto-link animacao" style="--i:5; --j:25">
+                        <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- INFORMAÇÕES DO LOGIN -->
+
+            <div class="info-texto login" style="color: white;">
+                <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
+                <p class="animacao" style="--i:1; --j:21">Aqui em nosso studio realizamos Tatto personalizadas</p>
+            </div>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+
+            <div class="formulario cadastro">
+                <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
+
+                <form method="POST" action="../backend/php/cadastro.php">
+                    <div class="campo-input animacao" style="--i:18; --j:1">
+                        <input type="text" name="nome" required>
+                        <label for="">Nome</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:19; --j:2">
+                        <input type="email" name="email" required>
+                        <label for="">E-mail</label>
+                        <i class='bx bxs-envelope'></i>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" name="senha" required class="password-input">
+                        <label for="">Senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+
+                    <div class="campo-input animacao" style="--i:20; --j:3">
+                        <input type="password" name="confirmar_senha" required class="password-input">
+                        <label for="">Confirmar senha</label>
+                        <span class="toggle-password">👁️</span>
+                    </div>
+
+                    <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+                </form>
+
+                </form>
+            </div>
+
+            <!-- INFORMAÇÕES DO CADASTRO -->
+
+            <div class="info-texto cadastro" style="color: white;">
+                <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
+                <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
+                    seu orçamento e dê o primeiro passo para realizar a tatuagem dos seus sonhos. Sua história,
+                    eternizada na pele 🖤🎨
+                </p> <br><br><br>
+
+                <div class="texto-link animacao" style="--i:22; --j:5">
+                    <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Studio <br> de Tatuagem</h1>
+                <h2>Bem-vindo ao Studio Stfin</h2>
+                <p>Transforme suas ideias em arte</p>
+                <a href="portfolio.html" class="btn">Veja um pouco sobre nosso Trabalho !</a>
+            </div>
+            <img src="assets/images/image.png" alt="Imagem representativa do Studio Tattoo" />
+        </section>
+
+        <!-- ANUNCIO PARA O USUÁRIO - PASSO A PASSO PARA REALIZAR UM ORÇAMENTO -->
+
+        <section id="orcamento-info">
+            <div class="info-card orcamento-card">
+                <h3>Como solicitar seu orçamento</h3>
+                <p>Para solicitar um orçamento personalizado, você precisa ter uma conta cadastrada em nosso sistema.
+                </p>
+                <div class="orcamento-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Se você já é cliente, faça <a href="#" onclick="openLogin()">login aqui</a></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Se é sua primeira vez, <a href="#" class="link-cadastro" onclick="openRegister()">cadastre-se
+                                agora</a></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Após o login, você será redirecionado automaticamente para a página de orçamento</p>
+                    </div>
+                </div>
+                <a href="orçamentoCliente.html" class="btn btn-orcamento" style="display: none;"
+                    id="orcamento-btn">Acessar Orçamento</a>
+            </div>
+        </section>
+
+        <!-- FIM -->
+
+        <section id="sobre">
+            <div class="sobre-container">
+                <div class="card">
+                    <img src="assets/images/tatuador.png" alt="Hiroshi Tanaka, tatuador do estúdio"
+                        class="sobre-imagem">
+                    <div class="card-content">
+                        <h2>Sobre o Artista</h2>
+                        <p>Sou Hiroshi Tanaka, tatuador especializado na arte tradicional japonesa, o Irezumi. Nasci em
+                            Kyoto e sempre fui fascinado pelos desenhos de dragões e carpas que via nos festivais. Aos
+                            18 anos, comecei como aprendiz de um mestre tatuador e aprendi a técnica do tebori, um
+                            método manual que exige precisão.</p>
+                        <p>Hoje, trabalho em meu estúdio em Tóquio, onde misturo tradição e modernidade para criar
+                            tatuagens que contam histórias. Para mim, cada desenho tem um significado e carrega um pouco
+                            da cultura japonesa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <div class="cards-container">
+                <div class="service-card">
+                    <div class="card-icon">✒️</div>
+                    <h3>Tatuagem Personalizada</h3>
+                    <p>Criamos designs únicos baseados em suas ideias e preferências, garantindo uma peça exclusiva.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Cover-up</h3>
+                    <p>Transformamos tatuagens antigas ou indesejadas em novas obras de arte com técnicas
+                        especializadas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="card-icon">🖌️</div>
+                    <h3>Piercing Profissional</h3>
+                    <p>Realizamos piercings com materiais de alta qualidade e seguindo todos os protocolos de segurança.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="espaco" class="espaco">
+            <div class="espaco-content">
+                <div class="linha-superior">
+                    <div class="espaco-texto">
+                        <h2>Nosso Espaço</h2>
+                        <p>Nosso estúdio tem um ambiente aconchegante e bem organizado. As paredes claras e os quadros
+                            com desenhos criam um clima artístico e acolhedor. A cadeira de tatuagem, confortável e
+                            ajustável, garante que o cliente se sinta à vontade durante o processo.</p>
+                    </div>
+
+                    <div class="ambiente-imagem">
+                        <img src="assets/images/espaço.png" alt="Foto do ambiente interno do Studio Tattoo"
+                            class="foto-ambiente">
+                        <p class="legenda-foto">Nosso ambiente acolhedor e profissional</p>
+                    </div>
+                </div>
+
+                <div class="linha-inferior">
+                    <div class="info-card">
+                        <h3>Informações de Contato</h3>
+                        <p><strong>Endereço:</strong> Bairro da Liberdade, Rua Galvão Bueno, 312 - São Paulo, SP</p>
+                        <p><strong>Telefone:</strong> (11) 98765-4321</p>
+                        <p><strong>Horário:</strong> Seg-Sex: 10h-20h | Sáb: 10h-18h</p>
+
+                        <div class="mapa-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197584455393!2d-46.63638992468639!3d-23.5616669788011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a00cc9896b%3A0x4d7fa8becba4e40d!2sR.%20Galv%C3%A3o%20Bueno%2C%20312%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001508-010!5e0!3m2!1spt-BR!2sbr!4v1711569958472!5m2!1spt-BR!2sbr"
+                                width="100%" height="300" style="border:0; border-radius: 10px;" allowfullscreen=""
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dicas">
+            <h2>Dicas para Sua Tatuagem</h2>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3>Preparação</h3>
+                    <ul>
+                        <li>Durma bem na noite anterior</li>
+                        <li>Hidrate-se bem</li>
+                        <li>Não vá de estômago vazio</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>Cuidados Pós-Tatuagem</h3>
+                    <ul>
+                        <li>Mantenha a tatuagem limpa</li>
+                        <li>Use o produto recomendado</li>
+                        <li>Evite exposição ao sol</li>
+                    </ul>
+                </div>
+                <div class="tip-card">
+                    <h3>O Que Evitar</h3>
+                    <ul>
+                        <li>Piscinas e praias</li>
+                        <li>Roupas apertadas</li>
+                        <li>Cremes não recomendados</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 10h - 20h</p>
+                <p>Sábado: 10h - 18h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@studiotattoo.com</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <div class="contato-opcoes">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Localização</h3>
+                <p>Bairro da Liberdade</p>
+                <p>Rua Galvão Bueno, 312</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
+    <script>
+        // Ouvinte para mensagens entre páginas
+        window.addEventListener('message', function (event) {
+            if (event.data === 'updateLoginStatus') {
+                updateLoginButtons();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
