@@ -34,8 +34,8 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html" class="active">Feedbacks</a></li>
-                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
-                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
+                <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+<li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
 
@@ -337,13 +337,10 @@
     <script src="assets/js/mobile.js"></script>
     <script>
 
-        // Ouvinte para mensagens entre páginas
+document.addEventListener('DOMContentLoaded', function() {
+        updateLoginButtons(); // Isso vai atualizar os botões de login/logout
+    });
 
-        window.addEventListener('message', function(event) {
-            if (event.data === 'updateLoginStatus') {
-                updateLoginButtons();
-            }
-        });
     </script>
 
 </body>

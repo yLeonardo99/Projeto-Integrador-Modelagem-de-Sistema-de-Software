@@ -1,6 +1,5 @@
 :root {
     /* Cores principais */
-
     --primary-color: #8b18d3;
     --primary-color-dark: #6a129f;
     --primary-color-border: #4b1c76;
@@ -8,14 +7,12 @@
     --primary-color-glow: rgba(139, 24, 211, 0.5);
 
     /* Cores de texto */
-
     --text-white: #fff;
     --text-light: #e0e0e0;
     --text-dark: #000;
     --text-gray: #666;
 
     /* Cores de fundo */
-
     --bg-dark: rgba(0, 0, 0, 0.7);
     --bg-darker: rgba(30, 30, 30, 0.9);
     --bg-dark-light: rgba(30, 30, 30, 0.8);
@@ -24,13 +21,11 @@
     --bg-white: #fff;
 
     /* Sombras */
-
     --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.3);
     --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.5);
     --shadow-dark: 0 15px 30px rgba(0, 0, 0, 0.5);
 
     /* Bordas */
-
     --border-radius: 5px;
     --border-radius-lg: 10px;
     --border-radius-xl: 15px;
@@ -38,7 +33,6 @@
     --border-width: 1px;
 
     /* Espaçamentos */
-
     --section-padding: 60px;
     --container-padding: 40px;
 }
@@ -309,5 +303,135 @@ select option[value=""] {
     .btn-enviar {
         padding: 12px;
         font-size: 1rem;
+    }
+}
+
+/* Estilo para a mensagem de login necessária */
+
+.login-message {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #ff6b6b;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+.login-message span {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.highlight-link {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #ff8e8e;
+    text-decoration: underline;
+}
+
+/* Efeito de pulsação para chamar atenção */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+/* Estilo para formulário desabilitado */
+#form-orcamento[disabled] {
+    position: relative;
+}
+
+#form-orcamento[disabled]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Estilo para o formulário desabilitado */
+#form-orcamento.disabled-form {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#form-orcamento.disabled-form::before {
+    content: '🔒';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#form-orcamento.disabled-form::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#form-orcamento.disabled-form:hover::before {
+    opacity: 1;
+    animation: shake 0.5s ease-in-out;
+}
+
+#form-orcamento.disabled-form:hover::after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Animação de balanço para o cadeado */
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    40% {
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) rotate(-5deg);
     }
 }

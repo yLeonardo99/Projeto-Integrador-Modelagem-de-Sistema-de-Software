@@ -147,9 +147,11 @@
         <section id="formulario-orcamento">
             <div class="orcamento-container">
                 <div id="login-message" class="login-message" style="display: none;">
-                    <span>Para o preenchimento do formulário você deve <a href="#" onclick="openLogin()"
-                            class="highlight-link">fazer um login</a> ou <a href="#"
-                            class="link-cadastro highlight-link" onclick="openRegister()">cadastrar-se</a>.</span>
+                    <span>✋ Atenção!</span>
+                    <p>Para enviar seu orçamento, você precisa <a href="#" onclick="openLogin()"
+                            class="highlight-link">fazer login</a> ou <a href="#" class="highlight-link"
+                            onclick="openLogin()">criar uma conta</a>.</p>
+                    <p>Assim que fizer login, o formulário será liberado para preenchimento.</p>
                 </div>
 
                 <form id="form-orcamento" style="display: none;">
@@ -273,27 +275,33 @@
 
         // Se o Usuário estiver logado, mostrar o formulário de orçamento caso contrário, mostrar a mensagem para fazer login
 
+        // Se o Usuário estiver logado, mostrar o formulário de orçamento habilitado
+        // Caso contrário, mostrar o formulário desabilitado com a mensagem de login
+
         document.addEventListener('DOMContentLoaded', function () {
             const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const formOrcamento = document.getElementById('form-orcamento');
+            const loginMessage = document.getElementById('login-message');
+            const formInputs = formOrcamento.querySelectorAll('input, select, textarea, button');
+
+            // Sempre mostrar o formulário
+            formOrcamento.style.display = 'block';
 
             if (isLoggedIn) {
-                document.getElementById('form-orcamento').style.display = 'block';
-                document.getElementById('login-message').style.display = 'none';
+                // Habilitar formulário se logado
+                loginMessage.style.display = 'none';
+                formInputs.forEach(input => {
+                    input.disabled = false;
+                });
                 document.getElementById('login-btn').style.display = 'none';
                 document.getElementById('logout-btn').style.display = 'block';
             } else {
-                document.getElementById('form-orcamento').style.display = 'none';
-                document.getElementById('login-message').style.display = 'block';
+                // Desabilitar formulário se não logado
+                loginMessage.style.display = 'block';
+                formInputs.forEach(input => {
+                    input.disabled = true;
+                });
             }
-        });
-
-        function logout() {
-            localStorage.removeItem('isLoggedIn');
-            window.location.href = 'index.html';
-        }
-        document.getElementById('estilo-tatuagem').addEventListener('change', function () {
-            const outroContainer = document.getElementById('outro-estilo-container');
-            outroContainer.style.display = this.value === 'outro' ? 'block' : 'none';
         });
     </script>
 </body>
