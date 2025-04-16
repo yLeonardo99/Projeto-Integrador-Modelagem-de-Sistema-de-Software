@@ -103,5 +103,5 @@ function openLogin() {
 
     if (container) container.style.display = 'block';
     if (formularioLogin) formularioLogin.style.display = 'block';
-    if (formularioCadastro) formularioCadastro.style.display = 'none';
+    if (formularioCadastro) formularioCadastro.style.display = 'block';
 }
