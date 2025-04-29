@@ -3,7 +3,7 @@
  * Também controla a exibição do formulário de orçamento com base no status de login
  */
 document.addEventListener('DOMContentLoaded', function () {
-    updateLoginButtons(); // Esta função deve ser chamada em TODAS as páginas
+    updateLoginButtons(); // Esta função ela é chamada em TODAS as páginas
     updateLoginStatus();  // Esta função só existe na página de orçamento
     setupTattooStyleSelector();
 });
@@ -57,21 +57,6 @@ function updateLoginStatus() {
 }
 
 /**
- * Configura o seletor de estilo de tatuagem (apenas página de orçamento)
- */
-function setupTattooStyleSelector() {
-    const estiloSelect = document.getElementById('estilo-tatuagem');
-    if (!estiloSelect) return;
-
-    estiloSelect.addEventListener('change', function () {
-        const outroContainer = document.getElementById('outro-estilo-container');
-        if (outroContainer) {
-            outroContainer.style.display = this.value === 'outro' ? 'block' : 'none';
-        }
-    });
-}
-
-/**
  * Realiza o logout do usuário em TODAS as páginas
  */
 function logout() {
@@ -83,6 +68,7 @@ function logout() {
 /**
  * Abre o modal de cadastro (comum a todas as páginas)
  */
+
 function openRegister() {
     const container = document.querySelector('.container-principal');
     const formularioLogin = document.querySelector('.formulario.login');
@@ -96,6 +82,7 @@ function openRegister() {
 /**
  * Abre o modal de login (comum a todas as páginas)
  */
+
 function openLogin() {
     const container = document.querySelector('.container-principal');
     const formularioLogin = document.querySelector('.formulario.login');

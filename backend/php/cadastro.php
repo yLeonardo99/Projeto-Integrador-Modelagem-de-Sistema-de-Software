@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <body>
         <script>
             alert('Cadastro realizado com sucesso!');
-            window.location.href = '../index.html';
+            window.location.href = '../../public/index.html';
         </script>
         </body>
         </html>";

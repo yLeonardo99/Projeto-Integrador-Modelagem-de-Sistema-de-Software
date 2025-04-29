@@ -60,3 +60,6 @@ Aqui vem a parte importante: ***revisar o código antes de fazer qualquer altera
   - Caso você tenha dúvidas sobre algo que foi alterado, pergunte para garantir que a mudança é segura.
 
 A ideia é sempre garantir que o código esteja funcionando direitinho e sem bugs antes de "subir" as alterações para o repositório.
+
+# IMAGEM 📸
+

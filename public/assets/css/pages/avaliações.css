@@ -382,3 +382,16 @@
         font-size: 1rem;
     }
 }
+
+/* test */
+
+.avaliacao-card {
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efeito de hover nos cards de avaliação */
+
+.avaliacao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(139, 24, 211, 0.4);
+}

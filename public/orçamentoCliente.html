@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,6 +17,7 @@
 <body>
 
     <!-- Background com efeito parallax -->
+     
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
     <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
     <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
@@ -80,6 +80,7 @@
                         <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
                     </div>
                 </form>
+
             </div>
 
             <!-- INFORMAÇÕES DO LOGIN -->
@@ -154,28 +155,30 @@
                     <p>Assim que fizer login, o formulário será liberado para preenchimento.</p>
                 </div>
 
-                <form id="form-orcamento" style="display: none;">
+                <!-- FORMULARIO DE ORÇAMENTO - FUNCIONAL APENAS QUANDO OO USUÁRIO REALIZAR LOGIN NO SISTEMA -->
+                <form id="form-orcamento" style="display: none;" action="https://formspree.io/f/xblolggl" method="POST"
+                    enctype="multipart/form-data">
                     <h2>Informações para Orçamento</h2>
 
                     <div class="form-group">
                         <label for="nome-cliente">Nome Completo*</label>
-                        <input type="text" id="nome-cliente" name="nome-cliente" required>
+                        <input type="text" id="nome-cliente" name="name" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email-cliente">E-mail*</label>
-                            <input type="email" id="email-cliente" name="email-cliente" required>
+                            <input type="email" id="email-cliente" name="_replyto" required>
                         </div>
                         <div class="form-group">
                             <label for="telefone-cliente">Telefone*</label>
-                            <input type="tel" id="telefone-cliente" name="telefone-cliente" required>
+                            <input type="tel" id="telefone-cliente" name="telephone" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="estilo-tatuagem">Estilo da Tatuagem*</label>
-                        <select id="estilo-tatuagem" name="estilo-tatuagem" required>
+                        <select id="estilo-tatuagem" name="tattoo_style" required>
                             <option value="" disabled selected>Selecione o estilo...</option>
                             <option value="aquarela">Aquarela</option>
                             <option value="realista">Realista</option>
@@ -184,23 +187,45 @@
                             <option value="geometrica">Geométrica</option>
                             <option value="japonesa">Japonesa (Irezumi)</option>
                             <option value="blackwork">Blackwork</option>
-                            <option value="outro">Outro (descreva abaixo)</option>
+                            <option value="outro">Outro (envie uma imagem de referência)</option>
                         </select>
                     </div>
 
-                    <div class="form-group" id="outro-estilo-container" style="display:none;">
-                        <label for="outro-estilo">Descreva o estilo desejado*</label>
-                        <textarea id="outro-estilo" name="outro-estilo" rows="3"></textarea>
+                    <!-- CAMPO DE UPLOAD SEMPRE VISÍVEL (OBRIGATÓRIO APENAS SE "OUTRO" FOR SELECIONADO) -->
+                    <div class="form-group">
+                        <label for="imagem-referencia">Imagem de referência <span id="required-star"
+                                style="display:none; color:red;">*</span></label>
+                        <input type="file" id="imagem-referencia" name="upload" accept="image/*">
+                        <small>Envie uma imagem que ilustre o estilo desejado (opcional, exceto se selecionou
+                            "Outro")</small>
                     </div>
 
                     <div class="form-group">
                         <label for="descricao-tatuagem">Descreva sua ideia com detalhes*</label>
-                        <textarea id="descricao-tatuagem" name="descricao-tatuagem" rows="5" required
+                        <textarea id="descricao-tatuagem" name="message" rows="5" required
                             placeholder="Fale sobre o que você deseja tatuar, tamanho aproximado, local do corpo, cores preferidas, elementos importantes, significado, etc."></textarea>
                     </div>
 
                     <button type="submit" class="btn-enviar">Enviar Solicitação</button>
                 </form>
+
+                <script>
+                    // Tornar o upload obrigatório apenas se "Outro" for selecionado
+                    document.getElementById('estilo-tatuagem').addEventListener('change', function () {
+                        const fileInput = document.getElementById('imagem-referencia');
+                        const requiredStar = document.getElementById('required-star');
+
+                        if (this.value === 'outro') {
+                            requiredStar.style.display = 'inline';
+                            fileInput.setAttribute('required', 'true');
+                        } else {
+                            requiredStar.style.display = 'none';
+                            fileInput.removeAttribute('required');
+                        }
+                    });
+                </script>
+
+
             </div>
         </section>
 

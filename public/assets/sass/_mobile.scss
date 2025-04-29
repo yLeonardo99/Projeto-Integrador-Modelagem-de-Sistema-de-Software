@@ -16,6 +16,7 @@ $mobile-max: 768px;
   }
 
   // Header e Menu Hamburguer
+
   header {
     padding: 15px 20px;
     flex-direction: row;
@@ -61,6 +62,7 @@ $mobile-max: 768px;
   }
 
   // Botão do menu hamburguer
+
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -118,6 +120,7 @@ $mobile-max: 768px;
   }
 
   // Seção Sobre
+  
   #sobre {
     .sobre-container {
       padding: 30px 20px;

@@ -329,4 +329,3 @@ document.querySelector('.formulario.login form').addEventListener('submit', func
 
     window.location.href = 'orçamentoCliente.html';
 });
-

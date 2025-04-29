@@ -48,13 +48,13 @@
             </ul>
         </nav>
 
-           <!-- MENU HAMBURGUER - Mobile -->
+        <!-- MENU HAMBURGUER - Mobile -->
 
-           <div class="menu-toggle">
+        <div class="menu-toggle">
             <span></span>
             <span></span>
             <span></span>
-          </div>
+        </div>
 
     </header>
 
@@ -423,16 +423,17 @@
 
     <script src="assets/js/script.js"></script>
     <script src="assets/js/orçamentoCliente.js"></script>
-    <scropt src="assets/js/mobile.js"></script>
-        
-    <script>
-        // Ouvinte para mensagens entre páginas
-        window.addEventListener('message', function(event) {
-            if (event.data === 'updateLoginStatus') {
-                updateLoginButtons();
-            }
-        });
-    </script>
+    <scropt src="assets/js/mobile.js">
+        </script>
+
+        <script>
+            // Ouvinte para mensagens entre páginas
+            window.addEventListener('message', function (event) {
+                if (event.data === 'updateLoginStatus') {
+                    updateLoginButtons();
+                }
+            });
+        </script>
 </body>
 
 </html>
