@@ -1,8 +1,8 @@
 ## 📸 IMAGENS DO PROJETO;
 
-![Imagem do Projeto](.../../public/assets/images/mokup-1.png);
+![Imagem do Projeto](https://github.com/yLeonardo99/Projeto-Integrador-Modelagem-de-Sistema-de-Software/blob/main/public/assets/images/mokup-1.png)
 
-![imagem do projeto2](.../../public/assets/images/mokup-2.png);
+![imagem do projeto2](.../../public/assets/images/mokup-2.png)
 
 ## 📽️ VIDEO DA APRESENTAÇÃO E FUNCIONALIDADES COMPLETA;
 
