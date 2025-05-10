@@ -771,7 +771,7 @@ form .texto-link {
 }
 
 .texto-link p a {
-    color: var(--cor-destaque);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition-padrao);

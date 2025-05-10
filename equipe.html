@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe - Studio Tattoo</title>
+    <meta name="description"content="Conheça a equipe por trás do Studio Tattoo - Alunos da Universidade Nove de Julho">
+    <meta name="keywords" content="tattoo, equipe, univerdade nove de julho, projeto integrador">
+    <meta name="author" content="Alunos da Universidade Nove de Julho - Projeto: Studio Tattoo">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="public/assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Background com efeito parallax -->
+    <div class="parallax-bg" id="parallax-bg1" style="background-image: url('public/assets/images/Fundo-Black.webp');">
+    </div>
+    <div class="parallax-bg" id="parallax-bg2" style="background-image: url('public/assets/images/Fundo-Black2.webp');">
+    </div>
+    <div class="parallax-bg" id="parallax-bg3" style="background-image: url('public/assets/images/Fundo-Black3.webp');">
+    </div>
+    <div class="parallax-bg" id="parallax-bg4" style="background-image: url('public/assets/images/Fundo-Black4.webp');">
+    </div>
+
+    <!-- Imagem no cabeçalho -->
+    <div class="image-header">
+        <img src="public/assets/images/uninovelogo.png" alt="Logo Universidade Nove de Julho" id="header-image">
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="public/assets/images/logo.png" alt="Logo do Studio Tattoo" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="orçamentoCliente.html">Orçamento</a></li>
+                <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="equipe.html" class="active">Equipe</a></li>
+                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
+            </ul>
+        </nav>
+
+        <!-- MENU HAMBURGUER - Mobile -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="team-section">
+            <div class="team-header">
+                <h1>Professor Responsável </h1>
+                <h3>Prof. Wanderley da Silva Junior</h3>
+                <h1>Equipe Desenvolvedora do Projeto</h1>
+                <p>Alunos da Universidade Nove de Julho - Campus Vila Prudente/SP</p>
+                <p>Projeto Integrador - 4º Semestre</p>
+                <p>Projeto: Website - Nome: TattooStudio - Desenvolvido com interação com banco de dados</p>
+            </div>
+
+            <div class="team-container">
+
+                <!-- Card Natalia -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Natalia+Campanini&background=8b18d3&color=fff&size=200"
+                            alt="Rodrigo">
+                    </div>
+                    <div class="card-content">
+                        <h3>Natalia Campanini</h3>
+                        <p class="role">Gerente de Projeto</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-tasks"></i> Gestão do cronograma</p>
+                            <p><i class="fas fa-users"></i> Coordenação da equipe</p>
+                            <p><i class="fas fa-file-alt"></i> Documentação do projeto</p>
+                            <p><i class="fas fa-hands-helping"></i> Suporte à equipe</p>
+                        </div>
+
+                        <a href="https://github.com/natcp93" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Leonardo Cassiano -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://avatars.githubusercontent.com/u/126301869?s=400&u=eb01fad8e176950d8bab1aca8afc4d5aab97aecd&v=4"
+                            alt="Leonardo Cassiano">
+                    </div>
+                    <div class="card-content">
+                        <h3>Leonardo Cassiano </h3>
+                        <p class="role">Desenvolvedor Full Stack</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-code"></i> Liderou a integração Front-Back</p>
+                            <p><i class="fas fa-database"></i> Modelagem do banco de dados</p>
+                            <p><i class="fab fa-folder"></i> Estruturação do projeto</p>
+                            <p><i class="fab fa-css3-alt"></i> Estilização avançada</p>
+                            <p><i class="fas fa-check-circle"></i> Validação de formulários</p>
+                            <p><i class="fas fa-sliders-h"></i> Componentes interativos</p>
+                            <p><i class="fas fa-users-cog"></i> Auxílio a toda equipe</p>
+                        </div>
+
+                        <a href="https://github.com/yLeonardo99" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Karen Veras -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://avatars.githubusercontent.com/u/106829366?v=4" alt="Karen Veras">
+                    </div>
+                    <div class="card-content">
+                        <h3>Karen Veras</h3>
+                        <p class="role">Desenvolvedora Back-end</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-database"></i> Modelagem do banco de dados</p>
+                            <p><i class="fas fa-table"></i> Criação de tabelas MySQL</p>
+                            <p><i class="fas fa-exchange-alt"></i> Integração formulários-BD</p>
+                            <p><i class="fab fa-php"></i> Desenvolvimento em PHP</p>
+                            <p><i class="fas fa-check-circle"></i> Validação de formulários</p>
+                        </div>
+
+                        <a href="https://github.com/karenverass" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Luiza Medeiros-->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://avatars.githubusercontent.com/u/126430433?v=4" alt="Luiza Medeiros">
+                    </div>
+                    <div class="card-content">
+                        <h3>Luiza Medeiros</h3>
+                        <p class="role">Desenvolvedora Front-end</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-home"></i> Criação da página inicial</p>
+                            <p><i class="fab fa-folder"></i> Estruturação inicial do projeto</p>
+                            <p><i class="fas fa-layer-group"></i> Base do projeto</p>
+                            <p><i class="fas fa-users"></i> Estrutura para equipe</p>
+                            <p><i class="fas fa-code"></i> Desenvolvimento inicial</p>
+                        </div>
+
+                        <a href="https://github.com/LuMedeir" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Rodrigo  -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Rodrigo+Fernando&background=8b18d3&color=fff&size=200"
+                            alt="Rodrigo">
+                    </div>
+                    <div class="card-content">
+                        <h3>Rodrigo Fernando</h3>
+                        <p class="role">Analista de Banco de Dados & Back-end</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-file-alt"></i> Documentação do projeto</p>
+                            <p><i class="fas fa-server"></i> Desenvolvimento back-end</p>
+                            <p><i class="fas fa-database"></i> Modelagem de dados</p>
+                            <p><i class="fas fa-hands-helping"></i> Suporte à equipe</p>
+                        </div>
+
+                        <a href="#" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Pedro -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Pedro+Henrique&background=8b18d3&color=fff&size=200"
+                            alt="Pedro">
+                    </div>
+                    <div class="card-content">
+                        <h3>Pedro Henrique</h3>
+                        <p class="role">Analista de Banco de Dados</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-file-alt"></i> Documentação do projeto</p>
+                            <p><i class="fas fa-server"></i> Desenvolvimento back-end</p>
+                            <p><i class="fas fa-users-cog"></i> Suporte ao gerente</p>
+                            <p><i class="fas fa-hands-helping"></i> Suporte à equipe</p>
+
+                        </div>
+
+                        <a href="#" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Jenifer -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://avatars.githubusercontent.com/u/179963233?v=4" alt="Jenifer">
+                    </div>
+                    <div class="card-content">
+                        <h3>Jenifer Moreira</h3>
+                        <p class="role">Desenvolvedora Front-end</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-paint-brush"></i> Criação do portfólio</p>
+                            <p><i class="fas fa-mobile-alt"></i> Design responsivo</p>
+                            <p><i class="fas fa-image"></i> Galeria de trabalhos</p>
+                            <p><i class="fas fa-user-tie"></i> Página do tatuador</p>
+                        </div>
+
+                        <a href="https://github.com/jhenymoreira" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Geovana -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Geovana+Moraes&background=8b18d3&color=fff&size=200"
+                            alt="Geovana MOraes">
+                    </div>
+                    <div class="card-content">
+                        <h3>Geovana Moraes</h3>
+                        <p class="role">Desenvolvedora Front-end</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-paint-brush"></i> Criação do portfólio</p>
+                            <p><i class="fas fa-mobile-alt"></i> Design responsivo</p>
+                            <p><i class="fas fa-image"></i> Galeria de trabalhos</p>
+                            <p><i class="fas fa-user-tie"></i> Página do tatuador</p>
+                        </div>
+
+                        <a href="https://github.com/yGeovanaDev" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Anderson -->
+
+                <div class="team-card">
+                    <div class="team-card">
+                        <div class="card-image">
+                            <img src="https://avatars.githubusercontent.com/u/139906914?v=4" alt="Anderson Cristiano">
+                        </div>
+                        <div class="card-content">
+                            <h3>Anderson Cristiano</h3>
+                            <p class="role">Desenvolvedor Front-end</p> <!-- Atualizado para Full Stack -->
+
+                            <div class="contributions">
+                                <p><i class="fas fa-sign-in-alt"></i> Desenvolvimento do login</p>
+                                <p><i class="fas fa-hands-helping"></i> Suporte ao time Full Stack</p>
+                                <p><i class="fas fa-shield-alt"></i> Segurança da autenticação</p>
+                                <p><i class="fas fa-mobile-alt"></i> Responsividade</p>
+                                <p><i class="fas fa-code-branch"></i> Integração de sistemas</p>
+                                <p><i class="fas fa-bug"></i> Correção de problemas</p>
+                            </div>
+
+                            <a href="https://github.com/AndersonCRFR" target="_blank" class="github-btn">
+                                <i class="fab fa-github"></i> GitHub
+                                <span class="hover-effect"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Erick -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Erick+Vinicius&background=8b18d3&color=fff&size=200"
+                            alt="Erick Vinicius"> <!-- Fixed name spelling -->
+                    </div>
+                    <div class="card-content">
+                        <h3>Erick Vinicius</h3>
+                        <p class="role">Desenvolvedor Front-end</p> <!-- Updated role -->
+
+                        <div class="contributions">
+                            <p><i class="fas fa-home"></i> Criação da página home</p>
+                            <p><i class="fas fa-layer-group"></i> Base inicial do projeto</p>
+                            <p><i class="fas fa-users"></i> Colaboração com a equipe</p>
+                            <p><i class="fas fa-handshake"></i> Parceria com Luiza</p>
+                            <p><i class="fas fa-code"></i> Estrutura front-end</p>
+                            <p><i class="fas fa-paint-roller"></i> Design base</p>
+                        </div>
+
+                        <a href="#" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Bruno -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Bruno+Silva&background=8b18d3&color=fff&size=200"
+                            alt="Bruno Silva">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bruno da Silva</h3>
+                        <p class="role">Documentação Técnica</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-file-alt"></i> Documentação final do projeto</p>
+                            <p><i class="fas fa-code"></i> Captura de códigos-fonte</p>
+                            <p><i class="fas fa-camera"></i> Prints das páginas</p>
+                            <p><i class="fas fa-book"></i> Organização do material</p>
+                            <p><i class="fas fa-check-circle"></i> Revisão técnica</p>
+                            <p><i class="fas fa-file-pdf"></i> Formatação do documento</p>
+                        </div>
+
+                        <a href="#" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Gabriel Louis -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Gabriel+Louis&background=8b18d3&color=fff&size=200"
+                            alt="Gabriel Louis">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gabriel Louis</h3>
+                        <p class="role">Design & Visão do Projeto</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-eye"></i> Visão inicial do website</p>
+                            <p><i class="fas fa-palette"></i> Direção de design</p>
+                            <p><i class="fas fa-lightbulb"></i> Conceito criativo</p>
+                            <p><i class="fas fa-object-group"></i> Layout base</p>
+                        </div>
+
+                        <a href="https://github.com/gLouis03" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card Gabriel Louis -->
+
+                <div class="team-card">
+                    <div class="card-image">
+                        <img src="https://ui-avatars.com/api/?name=Eduardo+Marciel&background=8b18d3&color=fff&size=200"
+                            alt="Eduardo Marciel">
+                    </div>
+                    <div class="card-content">
+                        <h3>Eduardo Marciel</h3>
+                        <p class="role">Design & Visão do Projeto</p>
+
+                        <div class="contributions">
+                            <p><i class="fas fa-eye"></i> Visão inicial do website</p>
+                            <p><i class="fas fa-palette"></i> Direção de design</p>
+                            <p><i class="fas fa-lightbulb"></i> Conceito criativo</p>
+                            <p><i class="fas fa-object-group"></i> Layout base</p>
+                        </div>
+
+                        <a href="#" target="_blank" class="github-btn">
+                            <i class="fab fa-github"></i> GitHub
+                            <span class="hover-effect"></span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Horário de Funcionamento</h3>
+                <p>Segunda a Sexta: 10h - 20h</p>
+                <p>Sábado: 10h - 18h</p>
+                <p>Domingo: Fechado</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contato</h3>
+                <p>Email: contato@studiotattoo.com</p>
+                <p>Telefone: (11) 98765-4321</p>
+                <div class="contato-opcoes">
+                    <a href="https://web.whatsapp.com/" target="_blank">
+                        <img src="public/assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank">
+                        <img src="public/assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Localização</h3>
+                <p>Bairro da Liberdade</p>
+                <p>Rua Galvão Bueno, 312</p>
+                <p>São Paulo - SP</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Studio Tattoo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="public/assets/js/script.js"></script>
+    <script src="public/assets/js/mobile.js"></script>
+    <script src="public/assets/js/orçamentoCliente.js"></script>
+    <script src="public/assets/js/avaliacoes.js"></script>
+    <script>
+        // Ouvinte para mensagens entre páginas
+        window.addEventListener('message', function (event) {
+            if (event.data === 'updateLoginStatus') {
+                updateLoginButtons();
+            }
+        });
+    </script>
+</body>
+
+</html>

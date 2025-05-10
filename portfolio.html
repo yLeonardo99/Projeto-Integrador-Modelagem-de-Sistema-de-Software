@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Tattoo - Portfólio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="icon" href="public/assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
@@ -27,14 +26,14 @@
     <!-- Video Carrossel -->
     <div class="video-carousel">
         <video id="header-video" autoplay muted loop>
-            <source src="assets/images/video.mp4" type="video/mp4">
+            <source src="public/assets/images/video.mp4" type="video/mp4">
         </video>
     </div>
 
     <header>
         <div class="logo">
             <a href="portfolio.html">
-                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+                <img src="public/assets/images/logo.png" alt="Logo do Studio Tattoo" />
             </a>
         </div>
         <nav>
@@ -43,6 +42,7 @@
                 <li><a href="portfolio.html" class="active">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
                 <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
                 <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
@@ -395,10 +395,10 @@
                 <p>Telefone: (11) 98765-4321</p>
                 <div class="contato-opcoes">
                     <a href="https://web.whatsapp.com/" target="_blank">
-                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                        <img src="public/assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                        <img src="public/assets/images/instagram-icon.png" alt="Instagram do estúdio" />
                     </a>
                 </div>
             </div>
@@ -421,13 +421,10 @@
         <div id="caption"></div>
     </div>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/orçamentoCliente.js"></script>
-    <scropt src="assets/js/mobile.js">
-        </script>
-
+    <script src="public/assets/js/script.js"></script>
+    <script src="public/assets/js/orçamentoCliente.js"></script>
+    <scropt src="public/assets/js/mobile.js"></script>
         <script>
-            // Ouvinte para mensagens entre páginas
             window.addEventListener('message', function (event) {
                 if (event.data === 'updateLoginStatus') {
                     updateLoginButtons();

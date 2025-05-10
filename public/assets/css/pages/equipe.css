@@ -1,0 +1,507 @@
+/* Estilos base - mantendo o padrão do site */
+:root {
+    /* Cores Principais */
+    --cor-preta: #000000;
+    --cor-branca: #ffffff;
+    --cor-destaque: #8b18d3;
+    --cor-destaque-claro: #692591;
+    --cor-destaque-escuro: #4b1c76;
+    --cor-texto-destaque: #ffffff;
+
+    /* Cores de Fundo */
+    --cor-fundo: #000;
+    --cor-fundo-escuro: rgba(0, 0, 0, 0.9);
+    --cor-fundo-medio: rgba(0, 0, 0, 0.7);
+    --cor-fundo-claro: rgba(0, 0, 0, 0.5);
+    --cor-fundo-card: rgba(30, 30, 30, 0.8);
+    --cor-fundo-card-claro: rgba(40, 40, 40, 0.6);
+
+    /* Cores de Texto */
+    --cor-texto: #fff;
+    --cor-texto-secundario: #e0e0e0;
+    --cor-texto-cinza: #ccc;
+
+    /* Bordas */
+    --cor-borda: #333;
+    --cor-borda-destaque: #4b1c76;
+
+    /* Sombras */
+    --cor-sombra: rgba(139, 24, 211, 0.3);
+    --cor-sombra-escura: rgba(0, 0, 0, 0.5);
+    --cor-sombra-destaque: rgba(139, 24, 211, 0.4);
+
+    /* Tamanhos */
+    --border-radius-sm: 5px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 15px;
+    --border-radius-xl: 20px;
+    --border-radius-circle: 50%;
+
+    /* Espaçamentos */
+    --padding-section: 80px;
+    --padding-container: 40px;
+    --padding-card: 30px;
+    --margin-padrao: 20px;
+
+    /* Fontes */
+    --fonte-principal: 'Roboto', sans-serif;
+    --fonte-secundaria: 'Playfair Display', serif;
+
+    /* Efeitos */
+    --transition-padrao: all 0.3s ease;
+    --transition-lenta: all 0.5s ease;
+}
+
+/* Estilos base */
+body {
+    margin: 0;
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    position: relative;
+    background-color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-texto);
+}
+
+/* Imagem no cabeçalho */
+.image-header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo-escuro);
+}
+
+#header-image {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: var(--transition-padrao);
+}
+
+#header-image:hover {
+    opacity: 1;
+    transform: scale(1.02);
+}
+
+/* Efeito Parallax */
+.parallax-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transform: translateZ(0);
+    will-change: transform, opacity;
+    transition: opacity 0.7s ease-in-out;
+}
+
+#parallax-bg1 {
+    background-image: url('assets/images/Fundo-Black.webp');
+    opacity: 1;
+}
+
+#parallax-bg2 {
+    background-image: url('assets/images/Fundo-Black4.webp');
+    opacity: 0;
+}
+
+#parallax-bg3 {
+    background-image: url('assets/images/Fundo-Black4.webp');
+    opacity: 0;
+}
+
+#parallax-bg4 {
+    background-image: url('assets/images/Fundo-Black2.webp');
+    opacity: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    font-family: var(--fonte-principal);
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-fundo-medio);
+    color: var(--cor-texto);
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    transition: var(--transition-padrao);
+}
+
+header.scrolled {
+    background-color: var(--cor-fundo-escuro);
+    padding: 10px 15px;
+}
+
+.logo {
+    margin-left: 120px;
+}
+
+.logo img {
+    max-width: 35%;
+    height: auto;
+    transition: var(--transition-padrao);
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    padding: 0 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    transition: var(--transition-padrao);
+    position: relative;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+    transform: translateY(-2px);
+}
+
+nav a.active {
+    color: var(--cor-destaque);
+    font-weight: 700;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--cor-destaque);
+    transition: var(--transition-padrao);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Seção da equipe */
+.team-section {
+    padding: var(--padding-section) 100px;
+    text-align: center;
+    background-color: var(--cor-fundo-medio);
+    margin: 40px 0;
+    position: relative;
+    z-index: 1;
+    border-radius: var(--border-radius-md);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-header {
+    margin-bottom: 50px;
+}
+
+.team-header h1 {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+    margin-bottom: var(--margin-padrao);
+    font-family: var(--fonte-secundaria);
+}
+
+.team-header p {
+    font-size: 1.1rem;
+    color: var(--cor-texto-secundario);
+    margin-bottom: 10px;
+}
+
+/* Container dos cards */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* Estilo dos cards individuais */
+.team-card {
+    background: var(--cor-fundo-card);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 20px var(--cor-sombra-escura);
+    transition: var(--transition-lenta);
+    display: flex;
+    flex-direction: column;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--cor-sombra-destaque);
+}
+
+/* Imagem do card */
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.1);
+}
+
+.card-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: var(--transition-lenta);
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.05);
+}
+
+/* Conteúdo do card */
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: var(--cor-texto);
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+    font-family: var(--fonte-secundaria);
+}
+
+/* Estilo para a função */
+.role {
+    color: var(--cor-destaque);
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Seção de contribuições */
+.contributions {
+    text-align: left;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(139, 24, 211, 0.1);
+    border-radius: var(--border-radius-sm);
+    border-left: 3px solid var(--cor-destaque);
+    flex-grow: 1;
+}
+
+.contributions p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: var(--cor-texto-secundario);
+    display: flex;
+    align-items: center;
+}
+
+.contributions i {
+    margin-right: 8px;
+    color: var(--cor-destaque);
+    width: 16px;
+    text-align: center;
+}
+
+/* Botão do GitHub */
+.github-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto);
+    border-radius: var(--border-radius-circle);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition-padrao);
+    margin-top: 15px;
+    align-self: center;
+    border: 2px solid var(--cor-destaque);
+    box-shadow: 0 4px 15px var(--cor-sombra-destaque);
+}
+
+.github-btn i {
+    margin-right: 8px;
+}
+
+.github-btn:hover {
+    background-color: transparent;
+    color: var(--cor-destaque);
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px var(--cor-sombra-destaque);
+}
+
+/* Efeito de ripple no botão */
+.hover-effect {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.github-btn:hover .hover-effect {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
+}
+
+/* Footer */
+footer {
+    background: var(--cor-fundo-escuro);
+    color: #dbd8d8;
+    position: relative;
+    z-index: 1;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--cor-destaque);
+    margin-bottom: var(--margin-padrao);
+    font-size: 1.3rem;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: 1px solid var(--cor-borda);
+}
+
+.contato-opcoes {
+    display: flex;
+    gap: 15px;
+    margin-top: var(--margin-padrao);
+}
+
+.contato-opcoes img {
+    width: 35px;
+    height: 35px;
+    transition: var(--transition-padrao);
+}
+
+.contato-opcoes a:hover img {
+    transform: scale(1.2) translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .team-section {
+        padding: var(--padding-section) 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .team-section {
+        padding: var(--padding-section) 20px;
+    }
+
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .contato-opcoes {
+        justify-content: center;
+    }
+}

@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Tattoo - Arte em Pele</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Studio Tattoo - Confira as avaliações de nossos clientes e veja a qualidade do nosso trabalho em tatuagens e piercings.">
+    <meta name="keywords" content="tattoo, tatuagem, piercing, studio tattoo, avaliações, clientes">
+    <meta name="author" content="Alunos da Universidade Nove de Julho - Projeto: Studio Tattoo">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link rel="icon" href="public/assets/images/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -28,14 +30,14 @@
 
     <div class="video-carousel">
         <video id="header-video" autoplay muted loop>
-            <source src="assets/images/video.mp4" type="video/mp4">
+            <source src="public/assets/images/video.mp4" type="video/mp4">
         </video>
     </div>
 
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+                <img src="public/assets/images/logo.png" alt="Logo do Studio Tattoo" />
             </a>
         </div>
         <nav>
@@ -44,12 +46,14 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
                 <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
                 <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
 
         <!-- MENU HAMBURGUER - Mobile -->
+
         <div class="menu-toggle">
             <span></span>
             <span></span>
@@ -160,7 +164,7 @@
                 <p>Transforme suas ideias em arte</p>
                 <a href="portfolio.html" class="btn">Veja um pouco sobre nosso Trabalho !</a>
             </div>
-            <img src="assets/images/image.png" alt="Imagem representativa do Studio Tattoo" />
+            <img src="public/assets/images/image.png" alt="Imagem representativa do Studio Tattoo" />
         </section>
 
         <!-- ANUNCIO PARA O USUÁRIO - PASSO A PASSO PARA REALIZAR UM ORÇAMENTO -->
@@ -175,10 +179,10 @@
                         <span class="step-number">1</span>
                         <p>Se você já é cliente, faça <a href="#" onclick="openLogin()">login aqui</a></p>
                     </div>
+
                     <div class="step">
                         <span class="step-number">2</span>
-                        <p>Se é sua primeira vez, <a href="#" class="link-cadastro" onclick="openLogin()">cadastre-se
-                                agora </a></p>
+                        <p>Se é sua primeira vez, <a href="#" class="link-cadastro" onclick="openLogin()">cadastre-se agora </a></p>
                     </div>
 
                     <div class="step">
@@ -193,12 +197,10 @@
             </div>
         </section>
 
-        <!-- FIM -->
-
         <section id="sobre">
             <div class="sobre-container">
                 <div class="card">
-                    <img src="assets/images/tatuador.png" alt="Hiroshi Tanaka, tatuador do estúdio"
+                    <img src="public/assets/images/tatuador.png" alt="Hiroshi Tanaka, tatuador do estúdio"
                         class="sobre-imagem">
                     <div class="card-content">
                         <h2>Sobre o Artista</h2>
@@ -250,7 +252,7 @@
                     </div>
 
                     <div class="ambiente-imagem">
-                        <img src="assets/images/espaço.png" alt="Foto do ambiente interno do Studio Tattoo"
+                        <img src="public/assets/images/espaço.png" alt="Foto do ambiente interno do Studio Tattoo"
                             class="foto-ambiente">
                         <p class="legenda-foto">Nosso ambiente acolhedor e profissional</p>
                     </div>
@@ -263,6 +265,8 @@
                         <p><strong>Telefone:</strong> (11) 98765-4321</p>
                         <p><strong>Horário:</strong> Seg-Sex: 10h-20h | Sáb: 10h-18h</p>
 
+                        <!-- MAPA DO GOOGLE - LOCALIZAÇÃO DA LIBERDADE   -->
+                         
                         <div class="mapa-container">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.197584455393!2d-46.63638992468639!3d-23.5616669788011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59a00cc9896b%3A0x4d7fa8becba4e40d!2sR.%20Galv%C3%A3o%20Bueno%2C%20312%20-%20Liberdade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001508-010!5e0!3m2!1spt-BR!2sbr!4v1711569958472!5m2!1spt-BR!2sbr"
@@ -303,6 +307,7 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -319,10 +324,10 @@
                 <p>Telefone: (11) 98765-4321</p>
                 <div class="contato-opcoes">
                     <a href="https://web.whatsapp.com/" target="_blank">
-                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                        <img src="public/assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                        <img src="public/assets/images/instagram-icon.png" alt="Instagram do estúdio" />
                     </a>
                 </div>
             </div>
@@ -338,9 +343,9 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/orçamentoCliente.js"></script>
-    <script src="assets/js/mobile.js"></script>
+    <script src="public/assets/js/script.js"></script>
+    <script src="public/assets/js/orçamentoCliente.js"></script>
+    <script src="public/assets/js/mobile.js"></script>
     <script>
         // Ouvinte para mensagens entre páginas
         window.addEventListener('message', function (event) {

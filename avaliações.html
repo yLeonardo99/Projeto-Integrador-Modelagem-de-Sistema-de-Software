@@ -2,13 +2,16 @@
 <html lang="pt-BR">
 
 <head>
+    <title>Studio Tattoo - Avaliações de Clientes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Tattoo - Avaliações de Clientes</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Studio Tattoo - Confira as avaliações de nossos clientes e veja a qualidade do nosso trabalho em tatuagens e piercings.">
+    <meta name="keywords" content="tattoo, tatuagem, piercing, studio tattoo, avaliações, clientes">
+    <meta name="author" content="Alunos da Universidade Nove de Julho - Projeto: Studio Tattoo">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/assets/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -16,7 +19,7 @@
 
 <body>
 
-    <!-- Background com efeito parallax -->
+    <!---------------------------------------- Background com efeito parallax ----------------------------------------------------->
 
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
 
@@ -24,7 +27,7 @@
         <!-- ----------------------------------------------- LOGO DA PAGINA --------------------------------------------------->
         <div class="logo">
             <a href="index.html">
-                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+                <img src="public/ssets/images/logo.png" alt="Logo do Studio Tattoo" />
             </a>
         </div>
 <!-- ---------------------------------------------------- MENU DE NAVEGACAO ---------------------------------------------------->
@@ -34,8 +37,9 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html" class="active">Feedbacks</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
                 <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
-<li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
 
@@ -298,7 +302,7 @@
             </div>
         </section>
     </main>
-
+<!-- ----------------------------------------------------------------- RODAPÉ ----------------------------------------------------------------->
     <footer>
         <div class="footer-content">
             <div class="footer-section">
@@ -313,10 +317,10 @@
                 <p>Telefone: (11) 98765-4321</p>
                 <div class="contato-opcoes">
                     <a href="https://web.whatsapp.com/" target="_blank">
-                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                        <img src="public/assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                        <img src="public/assets/images/instagram-icon.png" alt="Instagram do estúdio" />
                     </a>
                 </div>
             </div>
@@ -332,19 +336,15 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/orçamentoCliente.js"></script>
-    <script src="assets/js/mobile.js"></script>
-    <script src="assets/js/avaliacoes.js"></script>
+    <script src="public/assets/js/script.js"></script>
+    <script src="public/assets/js/orçamentoCliente.js"></script>
+    <script src="public/assets/js/mobile.js"></script>
+    <script src="public/assets/js/avaliacoes.js"></script>
     <script>
-
-document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
         updateLoginButtons(); // Isso vai atualizar os botões de login/logout
     });
-
     </script>
-
- 
 
 </body>
 

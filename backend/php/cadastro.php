@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $senha = $_POST['senha'] ?? '';
     $confirmar_senha = $_POST['confirmar_senha'] ?? '';
 
-    //  se todos os campos foram preenchidos
+    //  verifica se todos os campos foram preenchidos
 
     if (empty($nome) || empty($email) || empty($senha) || empty($confirmar_senha)) {
         die("Preencha todos os campos.");
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $verifica_email->close();
 
-    // Inserir no banco 
+    // Inserir no banco
 
     $stmt = $conn->prepare("INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $nome, $email, $senha_hash);

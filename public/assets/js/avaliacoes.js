@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Função para verificar se o nome é feminino
-
     function isNomeFeminino(nome) {
         if (!nome) return false;
         
@@ -17,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const nomeLower = nome.toLowerCase();
         
-        // Lista de sufixos comuns em nomes femininos em português
-
         const sufixosFemininos = ['a', 'e', 'i', 'da', 'na', 'ra', 'la', 'ta', 'ca', 'ah', 'ah'];
         
         // Verificar se o nome termina com algum dos sufixos femininos

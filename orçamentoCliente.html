@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studio Tattoo - Solicitar Orçamento</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="description" content="Studio Tattoo - Confira as avaliações de nossos clientes e veja a qualidade do nosso trabalho em tatuagens e piercings.">
+    <meta name="keywords" content="tattoo, tatuagem, piercing, studio tattoo, avaliações, clientes">
+    <meta name="author" content="Alunos da Universidade Nove de Julho - Projeto: Studio Tattoo">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="public/assets/images/favicon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,7 +29,7 @@
     <header>
         <div class="logo">
             <a href="index.html">
-                <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
+                <img src="public/assets/images/logo.png" alt="Logo do Studio Tattoo" />
             </a>
         </div>
         <nav>
@@ -35,6 +38,7 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html" class="active">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
+                <li><a href="equipe.html">Equipe</a></li>
                 <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
                 <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
@@ -58,6 +62,7 @@
             <span class="fundo-giratorio-secundario"></span>
 
             <!-- FORMULÁRIO DE LOGIN -->
+
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
 
@@ -156,7 +161,10 @@
                 </div>
 
                 <!-- FORMULARIO DE ORÇAMENTO - FUNCIONAL APENAS QUANDO OO USUÁRIO REALIZAR LOGIN NO SISTEMA -->
-                <form id="form-orcamento" style="display: none;" action="https://formspree.io/f/xblolggl" method="POST"
+
+                <!-- No Action utilizei o Formspree crie uma conta e coloque no action o link - para que o formulário seja enviado para o e-mail-->
+
+                <form id="form-orcamento" style="display: none;" action="#" method="POST" 
                     enctype="multipart/form-data">
                     <h2>Informações para Orçamento</h2>
 
@@ -192,6 +200,7 @@
                     </div>
 
                     <!-- CAMPO DE UPLOAD SEMPRE VISÍVEL (OBRIGATÓRIO APENAS SE "OUTRO" FOR SELECIONADO) -->
+
                     <div class="form-group">
                         <label for="imagem-referencia">Imagem de referência <span id="required-star"
                                 style="display:none; color:red;">*</span></label>
@@ -211,6 +220,7 @@
 
                 <script>
                     // Tornar o upload obrigatório apenas se "Outro" for selecionado
+                    
                     document.getElementById('estilo-tatuagem').addEventListener('change', function () {
                         const fileInput = document.getElementById('imagem-referencia');
                         const requiredStar = document.getElementById('required-star');
@@ -224,7 +234,6 @@
                         }
                     });
                 </script>
-
 
             </div>
         </section>
@@ -273,10 +282,10 @@
                 <p>Telefone: (11) 98765-4321</p>
                 <div class="contato-opcoes">
                     <a href="https://web.whatsapp.com/" target="_blank">
-                        <img src="assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
+                        <img src="public/assets/images/whatsapp-icon.png" alt="WhatsApp do estúdio" />
                     </a>
                     <a href="https://www.instagram.com" target="_blank">
-                        <img src="assets/images/instagram-icon.png" alt="Instagram do estúdio" />
+                        <img src="public/assets/images/instagram-icon.png" alt="Instagram do estúdio" />
                     </a>
                 </div>
             </div>
@@ -292,9 +301,9 @@
         </div>
     </footer>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/orçamentoCliente.js"></script>
-    <script src="assets/js/mobile.js"></script>
+    <script src="public/assets/js/script.js"></script>
+    <script src="public/assets/js/orçamentoCliente.js"></script>
+    <script src="public/assets/js/mobile.js"></script>
 
     <script>
 
