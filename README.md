@@ -1,6 +1,6 @@
 ## 📸 IMAGENS DO PROJETO;
 
-![Imagem do Projeto](.../../public/assets/images/mokup-1.png)
+![Imagem do Projeto](.../../public/assets/images/mokup-1.png);
 
 ![imagem do projeto2](.../../public/assets/images/mokup-2.png);
 
