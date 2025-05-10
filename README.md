@@ -6,7 +6,7 @@
 
 ## 📽️ VIDEO DA APRESENTAÇÃO E FUNCIONALIDADES COMPLETA;
 
-![Video de Apresentação](.../../public/assets/images/apresentacao.mp4)
+https://github.com/user-attachments/assets/39a76cff-8666-4b09-884a-83709e0ed139
 
 
 ## Contribuindo para o Projeto 🚀
