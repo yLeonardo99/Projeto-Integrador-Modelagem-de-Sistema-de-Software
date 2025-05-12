@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -42,11 +41,20 @@
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="portfolio.html">Portfólio</a></li>
-                <!-- <li><a href="orçamentoCliente.html">Orçamento</a></li> -->
+                <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
                 <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
+
+        <!-- MENU HAMBURGUER - Mobile -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
     </header>
 
     <div class="container-principal">
@@ -61,15 +69,15 @@
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
 
-                <form action="#">
+                <form action="../backend/php/login.php" method="POST">
                     <div class="campo-input animacao" style="--i:1; --j:22">
-                        <input type="text" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
@@ -81,6 +89,7 @@
                     </div>
                 </form>
             </div>
+
 
             <!-- INFORMAÇÕES DO LOGIN -->
 
@@ -94,36 +103,34 @@
             <div class="formulario cadastro">
                 <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
 
-                <form action="#">
+                <form method="POST" action="../backend/php/cadastro.php">
                     <div class="campo-input animacao" style="--i:18; --j:1">
-                        <input type="text" required>
+                        <input type="text" name="nome" required>
                         <label for="">Nome</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:19; --j:2">
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-envelope'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
 
                     <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required class="password-input">
+                        <input type="password" name="confirmar_senha" required class="password-input">
                         <label for="">Confirmar senha</label>
                         <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+                </form>
 
-                    <!-- <div class="texto-link animacao" style="--i:22; --j:5">
-                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
-                    </div> -->
                 </form>
             </div>
 
@@ -150,10 +157,42 @@
                 <h1>Studio <br> de Tatuagem</h1>
                 <h2>Bem-vindo ao Studio Stfin</h2>
                 <p>Transforme suas ideias em arte</p>
-                <a href="orçamentoCliente.html" class="btn">Solicite um orçamento!</a>
+                <a href="portfolio.html" class="btn">Veja um pouco sobre nosso Trabalho !</a>
             </div>
             <img src="assets/images/image.png" alt="Imagem representativa do Studio Tattoo" />
         </section>
+
+        <!-- ANUNCIO PARA O USUÁRIO - PASSO A PASSO PARA REALIZAR UM ORÇAMENTO -->
+
+        <section id="orcamento-info">
+            <div class="info-card orcamento-card">
+                <h3>Como solicitar seu orçamento</h3>
+                <p>Para solicitar um orçamento personalizado, você precisa ter uma conta cadastrada em nosso sistema.
+                </p>
+                <div class="orcamento-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Se você já é cliente, faça <a href="#" onclick="openLogin()">login aqui</a></p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Se é sua primeira vez, <a href="#" class="link-cadastro" onclick="openLogin()">cadastre-se
+                                agora </a></p>
+                    </div>
+
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Após o login, você será redirecionado automaticamente para a página de orçamento</p>
+                    </div>
+
+                </div>
+
+                <a href="orçamentoCliente.html" class="btn btn-orcamento" style="display: none;"
+                    id="orcamento-btn">Acessar Orçamento</a>
+            </div>
+        </section>
+
+        <!-- FIM -->
 
         <section id="sobre">
             <div class="sobre-container">
@@ -166,6 +205,7 @@
                             Kyoto e sempre fui fascinado pelos desenhos de dragões e carpas que via nos festivais. Aos
                             18 anos, comecei como aprendiz de um mestre tatuador e aprendi a técnica do tebori, um
                             método manual que exige precisão.</p>
+
                         <p>Hoje, trabalho em meu estúdio em Tóquio, onde misturo tradição e modernidade para criar
                             tatuagens que contam histórias. Para mim, cada desenho tem um significado e carrega um pouco
                             da cultura japonesa.</p>
@@ -175,6 +215,7 @@
         </section>
 
         <section id="servicos">
+
             <h2>Nossos Serviços</h2>
             <div class="cards-container">
                 <div class="service-card">
@@ -297,6 +338,16 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
+    <script>
+        // Ouvinte para mensagens entre páginas
+        window.addEventListener('message', function (event) {
+            if (event.data === 'updateLoginStatus') {
+                updateLoginButtons();
+            }
+        });
+    </script>
 
 </body>
 

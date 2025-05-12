@@ -9,16 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
 
     <!-- Background com efeito parallax -->
-
+     
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
     <div class="parallax-bg" id="parallax-bg2" style="background-image: url('assets/images/Fundo-Black2.webp');"></div>
     <div class="parallax-bg" id="parallax-bg3" style="background-image: url('assets/images/Fundo-Black3.webp');"></div>
@@ -36,11 +35,20 @@
                 <li><a href="portfolio.html">Portfólio</a></li>
                 <li><a href="orçamentoCliente.html" class="active">Orçamento</a></li>
                 <li><a href="avaliações.html">Feedbacks</a></li>
-                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
-    </header>
 
+        <!-- MENU HAMBURGUER - Mobile -->
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </header>
 
     <div class="container-principal">
         <button class="close-btn">&times;</button>
@@ -50,21 +58,20 @@
             <span class="fundo-giratorio-secundario"></span>
 
             <!-- FORMULÁRIO DE LOGIN -->
-
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
 
-                <form action="#">
+                <form action="../backend/php/login.php" method="POST">
                     <div class="campo-input animacao" style="--i:1; --j:22">
-                        <input type="text" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required>
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
@@ -73,6 +80,7 @@
                         <p>Não tem uma conta ainda? <a href="#" class="link-cadastro">Cadastrar-se</a></p>
                     </div>
                 </form>
+
             </div>
 
             <!-- INFORMAÇÕES DO LOGIN -->
@@ -82,45 +90,39 @@
             </div>
 
             <!-- FORMULÁRIO DE CADASTRO -->
-
             <div class="formulario cadastro">
                 <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
 
-                <form action="#">
+                <form method="POST" action="../backend/php/cadastro.php">
                     <div class="campo-input animacao" style="--i:18; --j:1">
-                        <input type="text" required>
+                        <input type="text" name="nome" required>
                         <label for="">Nome</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:19; --j:2">
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-envelope'></i>
                     </div>
 
-                    <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                        <input type="password" name="confirmar_senha" required class="password-input">
                         <label for="">Confirmar senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
-
-                    <div class="texto-link animacao" style="--i:22; --j:5">
-                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
-                    </div>
                 </form>
             </div>
 
             <!-- INFORMAÇÕES DO CADASTRO -->
-
             <div class="info-texto cadastro" style="color: white;">
                 <h2 class="animacao" style="--i:17; --j:0;">CADASTRO!</h2>
                 <p class="animacao" style="--i:18; --j:1;">Transforme suas ideias em arte! Faça seu cadastro, solicite
@@ -132,7 +134,6 @@
                     <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -146,28 +147,38 @@
 
         <section id="formulario-orcamento">
             <div class="orcamento-container">
-                <form id="form-orcamento">
+                <div id="login-message" class="login-message" style="display: none;">
+                    <span>✋ Atenção!</span>
+                    <p>Para enviar seu orçamento, você precisa <a href="#" onclick="openLogin()"
+                            class="highlight-link">fazer login</a> ou <a href="#" class="highlight-link"
+                            onclick="openLogin()">criar uma conta</a>.</p>
+                    <p>Assim que fizer login, o formulário será liberado para preenchimento.</p>
+                </div>
+
+                <!-- FORMULARIO DE ORÇAMENTO - FUNCIONAL APENAS QUANDO OO USUÁRIO REALIZAR LOGIN NO SISTEMA -->
+                <form id="form-orcamento" style="display: none;" action="https://formspree.io/f/xblolggl" method="POST"
+                    enctype="multipart/form-data">
                     <h2>Informações para Orçamento</h2>
 
                     <div class="form-group">
                         <label for="nome-cliente">Nome Completo*</label>
-                        <input type="text" id="nome-cliente" name="nome-cliente" required>
+                        <input type="text" id="nome-cliente" name="name" required>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email-cliente">E-mail*</label>
-                            <input type="email" id="email-cliente" name="email-cliente" required>
+                            <input type="email" id="email-cliente" name="_replyto" required>
                         </div>
                         <div class="form-group">
                             <label for="telefone-cliente">Telefone*</label>
-                            <input type="tel" id="telefone-cliente" name="telefone-cliente" required>
+                            <input type="tel" id="telefone-cliente" name="telephone" required>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="estilo-tatuagem">Estilo da Tatuagem*</label>
-                        <select id="estilo-tatuagem" name="estilo-tatuagem" required>
+                        <select id="estilo-tatuagem" name="tattoo_style" required>
                             <option value="" disabled selected>Selecione o estilo...</option>
                             <option value="aquarela">Aquarela</option>
                             <option value="realista">Realista</option>
@@ -176,23 +187,47 @@
                             <option value="geometrica">Geométrica</option>
                             <option value="japonesa">Japonesa (Irezumi)</option>
                             <option value="blackwork">Blackwork</option>
-                            <option value="outro">Outro (descreva abaixo)</option>
+                            <option value="outro">Outro (envie uma imagem de referência)</option>
                         </select>
                     </div>
 
-                    <div class="form-group" id="outro-estilo-container" style="display:none;">
-                        <label for="outro-estilo">Descreva o estilo desejado*</label>
-                        <textarea id="outro-estilo" name="outro-estilo" rows="3"></textarea>
+                    <!-- CAMPO DE UPLOAD SEMPRE VISÍVEL (OBRIGATÓRIO APENAS SE "OUTRO" FOR SELECIONADO) -->
+
+                    <div class="form-group">
+                        <label for="imagem-referencia">Imagem de referência <span id="required-star"
+                                style="display:none; color:red;">*</span></label>
+                        <input type="file" id="imagem-referencia" name="upload" accept="image/*">
+                        <small>Envie uma imagem que ilustre o estilo desejado (opcional, exceto se selecionou
+                            "Outro")</small>
                     </div>
 
                     <div class="form-group">
                         <label for="descricao-tatuagem">Descreva sua ideia com detalhes*</label>
-                        <textarea id="descricao-tatuagem" name="descricao-tatuagem" rows="5" required
+                        <textarea id="descricao-tatuagem" name="message" rows="5" required
                             placeholder="Fale sobre o que você deseja tatuar, tamanho aproximado, local do corpo, cores preferidas, elementos importantes, significado, etc."></textarea>
                     </div>
 
                     <button type="submit" class="btn-enviar">Enviar Solicitação</button>
                 </form>
+
+                <script>
+                    // Tornar o upload obrigatório apenas se "Outro" for selecionado
+                    
+                    document.getElementById('estilo-tatuagem').addEventListener('change', function () {
+                        const fileInput = document.getElementById('imagem-referencia');
+                        const requiredStar = document.getElementById('required-star');
+
+                        if (this.value === 'outro') {
+                            requiredStar.style.display = 'inline';
+                            fileInput.setAttribute('required', 'true');
+                        } else {
+                            requiredStar.style.display = 'none';
+                            fileInput.removeAttribute('required');
+                        }
+                    });
+                </script>
+
+
             </div>
         </section>
 
@@ -203,7 +238,8 @@
                     <div class="info-card">
                         <div class="info-icon">1</div>
                         <h3>Solicitação</h3>
-                        <p>Preencha o formulário com detalhes sobre sua ideia de tatuagem.</p>
+                        <p> Faça seu LOGIN ou CADASTRAR-SE após Preencha o formulário com detalhes sobre sua ideia de
+                            tatuagem.</p>
                     </div>
                     <div class="info-card">
                         <div class="info-icon">2</div>
@@ -259,8 +295,42 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
 
+    <script>
 
+        // Se o Usuário estiver logado, mostrar o formulário de orçamento caso contrário, mostrar a mensagem para fazer login
+
+        // Se o Usuário estiver logado, mostrar o formulário de orçamento habilitado
+        // Caso contrário, mostrar o formulário desabilitado com a mensagem de login
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+            const formOrcamento = document.getElementById('form-orcamento');
+            const loginMessage = document.getElementById('login-message');
+            const formInputs = formOrcamento.querySelectorAll('input, select, textarea, button');
+
+            // Sempre mostrar o formulário
+            formOrcamento.style.display = 'block';
+
+            if (isLoggedIn) {
+                // Habilitar formulário se logado
+                loginMessage.style.display = 'none';
+                formInputs.forEach(input => {
+                    input.disabled = false;
+                });
+                document.getElementById('login-btn').style.display = 'none';
+                document.getElementById('logout-btn').style.display = 'block';
+            } else {
+                // Desabilitar formulário se não logado
+                loginMessage.style.display = 'block';
+                formInputs.forEach(input => {
+                    input.disabled = true;
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

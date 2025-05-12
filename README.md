@@ -1,4 +1,14 @@
-# Projeto-Integrador-Modelagem-de-Sistema-de-Software
+## 📸 IMAGENS DO PROJETO;
+
+![Imagem do Projeto](.../../public/assets/images/mokup-1.png)
+
+![imagem do projeto2](.../../public/assets/images/mokup-2.png);
+
+## 📽️ VIDEO DA APRESENTAÇÃO;
+
+![Video de Apresentação](.../../public/assets/images/apresentacao.mp4)
+
+
 
 ## Contribuindo para o Projeto 🚀
 
@@ -60,3 +70,4 @@ Aqui vem a parte importante: ***revisar o código antes de fazer qualquer altera
   - Caso você tenha dúvidas sobre algo que foi alterado, pergunte para garantir que a mudança é segura.
 
 A ideia é sempre garantir que o código esteja funcionando direitinho e sem bugs antes de "subir" as alterações para o repositório.
+

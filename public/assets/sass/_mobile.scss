@@ -1,0 +1,231 @@
+// Variáveis para breakpoints
+$mobile-max: 768px;
+
+// Mixin para media query mobile
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+// Estilos para mobile
+@include mobile {
+  // Reset de alguns estilos para mobile
+  body {
+    overflow-x: hidden;
+  }
+
+  // Header e Menu Hamburguer
+
+  header {
+    padding: 15px 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    .logo {
+      img {
+        max-width: 120px;
+      }
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 70%;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      transition: right 0.3s ease;
+      z-index: 1000;
+      padding-top: 80px;
+
+      &.active {
+        right: 0;
+      }
+
+      ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+
+        li {
+          margin: 15px 0;
+          
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  // Botão do menu hamburguer
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    
+    span {
+      display: block;
+      width: 100%;
+      height: 3px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+
+  // Hero Section
+  .hero {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+
+    .hero-content {
+      width: 100%;
+      margin-bottom: 30px;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+
+  // Seção Sobre
+  
+  #sobre {
+    .sobre-container {
+      padding: 30px 20px;
+
+      .card {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  // Seção Serviços
+  #servicos {
+    padding: 30px 20px;
+
+    .cards-container {
+      flex-direction: column;
+
+      .service-card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Seção Espaço
+  #espaco {
+    .espaco-content {
+      padding: 30px 20px;
+
+      .linha-superior {
+        flex-direction: column;
+
+        .espaco-texto {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+
+        .ambiente-imagem {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  // Seção Dicas
+  #dicas {
+    padding: 30px 20px;
+
+    .tips-container {
+      flex-direction: column;
+
+      .tip-card {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  // Footer
+  footer {
+    .footer-content {
+      flex-direction: column;
+
+      .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+  }
+
+  // Formulário de Login/Cadastro
+  .container-principal {
+    width: 90%;
+    
+    .form-container {
+      flex-direction: column;
+      
+      .formulario, .info-texto {
+        width: 100%;
+      }
+      
+      .info-texto {
+        display: none; // Esconde o texto informativo em mobile para economizar espaço
+      }
+    }
+  }
+
+  // Ajustes para o vídeo de fundo
+
+  .video-carousel {
+    height: 50vh;
+    
+    video {
+      object-fit: cover;
+    }
+  }
+
+  // Ajustes para os efeitos parallax
+  .parallax-bg {
+    background-attachment: scroll !important;
+  }
+}

@@ -1,16 +1,53 @@
-/* Estilo para o select as opções de Tatto */
+:root {
+    /* Cores principais */
+    --primary-color: #8b18d3;
+    --primary-color-dark: #6a129f;
+    --primary-color-border: #4b1c76;
+    --primary-color-shadow: rgba(139, 24, 211, 0.4);
+    --primary-color-glow: rgba(139, 24, 211, 0.5);
 
+    /* Cores de texto */
+    --text-white: #fff;
+    --text-light: #e0e0e0;
+    --text-dark: #000;
+    --text-gray: #666;
+
+    /* Cores de fundo */
+    --bg-dark: rgba(0, 0, 0, 0.7);
+    --bg-darker: rgba(30, 30, 30, 0.9);
+    --bg-dark-light: rgba(30, 30, 30, 0.8);
+    --bg-input: rgba(255, 255, 255, 0.1);
+    --bg-input-focus: rgba(255, 255, 255, 0.15);
+    --bg-white: #fff;
+
+    /* Sombras */
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --shadow-dark: 0 15px 30px rgba(0, 0, 0, 0.5);
+
+    /* Bordas */
+    --border-radius: 5px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 15px;
+    --border-radius-circle: 50%;
+    --border-width: 1px;
+
+    /* Espaçamentos */
+    --section-padding: 60px;
+    --container-padding: 40px;
+}
+
+/* Estilo para o select as opções de Tatto */
 select,
 select option {
-    color: #000 !important;
-    background-color: #fff !important;
+    color: var(--text-dark) !important;
+    background-color: var(--bg-white) !important;
 }
 
 select:invalid,
 select option[value=""] {
-    color: #666 !important;
+    color: var(--text-gray) !important;
 }
-
 
 .orcamento-hero {
     height: 50vh;
@@ -18,7 +55,7 @@ select option[value=""] {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/images/orcamento-bg.jpg') no-repeat center center;
+    background: linear-gradient(var(--bg-dark), var(--bg-dark)), url('assets/images/orcamento-bg.jpg') no-repeat center center;
     background-size: cover;
     margin-top: 80px;
     position: relative;
@@ -32,33 +69,33 @@ select option[value=""] {
 .orcamento-hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    color: #fff;
+    color: var(--text-white);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .orcamento-hero p {
     font-size: 1.2rem;
-    color: #e0e0e0;
+    color: var(--text-light);
     margin-bottom: 30px;
 }
 
 #formulario-orcamento {
-    padding: 60px 20px;
+    padding: var(--section-padding) 20px;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .orcamento-container {
-    background: rgba(30, 30, 30, 0.9);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid #4b1c76;
+    background: var(--bg-darker);
+    border-radius: var(--border-radius-xl);
+    padding: var(--container-padding);
+    box-shadow: var(--shadow-medium);
+    border: var(--border-width) solid var(--primary-color-border);
 }
 
 .orcamento-container h2 {
     text-align: center;
-    color: #8b18d3;
+    color: var(--primary-color);
     margin-bottom: 40px;
     font-size: 2rem;
 }
@@ -80,7 +117,7 @@ select option[value=""] {
 .form-group label {
     display: block;
     margin-bottom: 8px;
-    color: #fff;
+    color: var(--text-white);
     font-weight: 500;
 }
 
@@ -89,32 +126,32 @@ select option[value=""] {
 .form-group textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #4b1c76;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    border: var(--border-width) solid var(--primary-color-border);
+    border-radius: var(--border-radius);
+    background: var(--bg-input);
+    color: var(--text-white);
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 /* Estilo específico para selects */
 .form-group select {
-    background-color: #fff !important;
-    color: #000 !important;
+    background-color: var(--bg-white) !important;
+    color: var(--text-dark) !important;
 }
 
 .form-group select option {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #8b18d3;
-    box-shadow: 0 0 10px rgba(139, 24, 211, 0.5);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color-glow);
+    background: var(--bg-input-focus);
 }
 
 .form-group textarea {
@@ -125,10 +162,10 @@ select option[value=""] {
 .btn-enviar {
     width: 100%;
     padding: 15px;
-    background: #8b18d3;
-    color: #fff;
+    background: var(--primary-color);
+    color: var(--text-white);
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-weight: bold;
     font-size: 1.1rem;
     cursor: pointer;
@@ -137,15 +174,15 @@ select option[value=""] {
 }
 
 .btn-enviar:hover {
-    background: #6a129f;
+    background: var(--primary-color-dark);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(139, 24, 211, 0.4);
+    box-shadow: var(--shadow-light);
 }
 
 /* Seção de Informações */
 #info-orcamento {
-    padding: 60px 20px;
-    background: rgba(0, 0, 0, 0.7);
+    padding: var(--section-padding) 20px;
+    background: var(--bg-dark);
 }
 
 .info-container {
@@ -156,7 +193,7 @@ select option[value=""] {
 .info-container h2 {
     text-align: center;
     margin-bottom: 50px;
-    color: #8b18d3;
+    color: var(--primary-color);
 }
 
 .info-cards {
@@ -167,25 +204,25 @@ select option[value=""] {
 }
 
 .info-card {
-    background: rgba(30, 30, 30, 0.8);
+    background: var(--bg-dark-light);
     padding: 30px;
-    border-radius: 10px;
+    border-radius: var(--border-radius-lg);
     text-align: center;
     transition: all 0.3s ease;
-    border-bottom: 3px solid #8b18d3;
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .info-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-dark);
 }
 
 .info-icon {
     width: 50px;
     height: 50px;
-    background: #8b18d3;
-    color: #fff;
-    border-radius: 50%;
+    background: var(--primary-color);
+    color: var(--text-white);
+    border-radius: var(--border-radius-circle);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,12 +232,12 @@ select option[value=""] {
 }
 
 .info-card h3 {
-    color: #fff;
+    color: var(--text-white);
     margin-bottom: 15px;
 }
 
 .info-card p {
-    color: #e0e0e0;
+    color: var(--text-light);
     font-size: 0.95rem;
 }
 
@@ -266,5 +303,135 @@ select option[value=""] {
     .btn-enviar {
         padding: 12px;
         font-size: 1rem;
+    }
+}
+
+/* Estilo para a mensagem de login necessária */
+
+.login-message {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #ff6b6b;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+.login-message span {
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.highlight-link {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #ff8e8e;
+    text-decoration: underline;
+}
+
+/* Efeito de pulsação para chamar atenção */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+    }
+}
+
+/* Estilo para formulário desabilitado */
+#form-orcamento[disabled] {
+    position: relative;
+}
+
+#form-orcamento[disabled]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 8px;
+}
+
+/* Estilo para o formulário desabilitado */
+#form-orcamento.disabled-form {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+#form-orcamento.disabled-form::before {
+    content: '🔒';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#form-orcamento.disabled-form::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#form-orcamento.disabled-form:hover::before {
+    opacity: 1;
+    animation: shake 0.5s ease-in-out;
+}
+
+#form-orcamento.disabled-form:hover::after {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Animação de balanço para o cadeado */
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+
+    40% {
+        transform: translate(-50%, -50%) rotate(-10deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) rotate(5deg);
+    }
+
+    80% {
+        transform: translate(-50%, -50%) rotate(-5deg);
     }
 }

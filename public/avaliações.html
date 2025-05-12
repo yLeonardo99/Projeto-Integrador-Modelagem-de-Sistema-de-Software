@@ -9,8 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -18,23 +17,36 @@
 <body>
 
     <!-- Background com efeito parallax -->
+
     <div class="parallax-bg" id="parallax-bg1" style="background-image: url('assets/images/Fundo-Black.webp');"></div>
 
     <header>
+        <!-- ----------------------------------------------- LOGO DA PAGINA --------------------------------------------------->
         <div class="logo">
             <a href="index.html">
                 <img src="assets/images/logo.png" alt="Logo do Studio Tattoo" />
             </a>
         </div>
+<!-- ---------------------------------------------------- MENU DE NAVEGACAO ---------------------------------------------------->
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfólio</a></li>
-                <!-- <li><a href="orçamentoCliente.html">Orçamento</a></li> (Cliente só tera acesso após o login) -->
+                <li><a href="orçamentoCliente.html">Orçamento</a></li>
                 <li><a href="avaliações.html" class="active">Feedbacks</a></li>
-                <li><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+                <li id="login-btn"><a href="#" class="open-btn" onclick="openLogin()">Login</a></li>
+<li id="logout-btn" style="display:none;"><a href="#" onclick="logout()">Sair</a></li>
             </ul>
         </nav>
+
+           <!-- MENU HAMBURGUER - Mobile -->
+
+           <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
     </header>
 
     <div class="container-principal">
@@ -44,22 +56,22 @@
             <span class="fundo-giratorio"></span>
             <span class="fundo-giratorio-secundario"></span>
 
-            <!-- FORMULÁRIO DE LOGIN -->
+            <!-- ------------------------------------------ FORMULÁRIO DE LOGIN ----------------------------------------------------- -->
 
             <div class="formulario login">
                 <h2 class="titulo animacao" style="--i:0; --j:21">Login</h2>
 
-                <form action="#">
+                <form action="../backend/php/login.php" method="POST">
                     <div class="campo-input animacao" style="--i:1; --j:22">
-                        <input type="text" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:2; --j:23">
-                        <input type="password" required>
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:3; --j:24">Login</button>
@@ -70,47 +82,46 @@
                 </form>
             </div>
 
-            <!-- INFORMAÇÕES DO LOGIN -->
+            <!--****** CARD DE INFORMAÇÕES DO LOGIN ***** -->
+
             <div class="info-texto login" style="color: white;">
                 <h2 class="animacao" style="--i:0; --j:20">Seja Bem Vindo(a)!</h2>
                 <p class="animacao" style="--i:1; --j:21">Aqui em nosso studio realizamos Tatto personalizadas</p>
             </div>
 
-            <!-- FORMULÁRIO DE CADASTRO -->
+            <!-- ---------------------------------------------------- FORMULÁRIO DE CADASTRO -------------------------------- -->
 
             <div class="formulario cadastro">
                 <h2 class="titulo animacao" style="--i:17; --j:0">Cadastrar-se</h2>
 
-                <form action="#">
+                <form method="POST" action="../backend/php/cadastro.php">
                     <div class="campo-input animacao" style="--i:18; --j:1">
-                        <input type="text" required>
+                        <input type="text" name="nome" required>
                         <label for="">Nome</label>
                         <i class='bx bxs-user'></i>
                     </div>
 
                     <div class="campo-input animacao" style="--i:19; --j:2">
-                        <input type="email" required>
+                        <input type="email" name="email" required>
                         <label for="">E-mail</label>
                         <i class='bx bxs-envelope'></i>
                     </div>
 
-                    <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                    <div class="campo-input animacao" style="--i:2; --j:23">
+                        <input type="password" name="senha" required class="password-input">
                         <label for="">Senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <div class="campo-input animacao" style="--i:20; --j:3">
-                        <input type="password" required>
+                        <input type="password" name="confirmar_senha" required class="password-input">
                         <label for="">Confirmar senha</label>
-                        <i class='bx bxs-lock-alt'></i>
+                        <span class="toggle-password">👁️</span>
                     </div>
 
                     <button type="submit" class="botao animacao" style="--i:21;--j:4">Cadastrar-se</button>
+                </form>
 
-                    <div class="texto-link animacao" style="--i:22; --j:5">
-                        <p>Já tem uma conta? <a href="#" class="link-login">Login</a></p>
-                    </div>
                 </form>
             </div>
 
@@ -138,7 +149,7 @@
                 <p>Veja o que nossos clientes dizem sobre a experiência no Studio</p>
             </div>
         </section>
-
+ 
         <section id="avaliacoes">
             <div class="avaliacoes-container">
                 <h2>Depoimentos Reais</h2>
@@ -322,6 +333,19 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/orçamentoCliente.js"></script>
+    <script src="assets/js/mobile.js"></script>
+    <script src="assets/js/avaliacoes.js"></script>
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+        updateLoginButtons(); // Isso vai atualizar os botões de login/logout
+    });
+
+    </script>
+
+ 
+
 </body>
 
 </html>

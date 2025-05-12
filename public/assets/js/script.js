@@ -224,6 +224,7 @@ dodocument.addEventListener('DOMContentLoaded', function () {
 /* ---------------------------------------------------------- ORÇAMENTO CLIENTE --------------------------------------------------*/
 
 // Mostrar campo "Outro" quando selecionado
+
 document.getElementById('estilo-tatuagem').addEventListener('change', function () {
     const outroContainer = document.getElementById('outro-estilo-container');
     outroContainer.style.display = this.value === 'outro' ? 'block' : 'none';
@@ -295,3 +296,36 @@ document.addEventListener('DOMContentLoaded', function () {
 function openPopup(popupId) {
     document.getElementById(popupId).style.display = 'flex';
 }
+
+/* --------------------------------------------------------- ANUNCIO PARA USUARIO / FAZER UM CADASTRO  --------------------------------------------------------------------------------------------------*/
+
+function openRegister() {
+    const container = document.querySelector('.container-principal');
+    container.style.display = 'flex';
+    container.classList.add('ativo');
+}
+
+// Verificar se o usuário está logado (simulação)
+
+function checkLoggedIn() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
+    const orcamentoBtn = document.getElementById('orcamento-btn');
+
+    if (isLoggedIn) {
+        orcamentoBtn.style.display = 'inline-block';
+    } else {
+        orcamentoBtn.style.display = 'none';
+    }
+}
+
+// Chamar a função quando a página carregar
+
+window.addEventListener('load', checkLoggedIn);
+
+document.querySelector('.formulario.login form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    localStorage.setItem('isLoggedIn', 'true');
+    checkLoggedIn();
+
+    window.location.href = 'orçamentoCliente.html';
+});
